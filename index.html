@@ -123,15 +123,13 @@
       <h2 class="text-5xl font-bold mb-6 flex gap-x-2  text-white text-center mt-5">Proyectos</h2>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 flex flex-col">
       <a href="https://github.com/405091-GUZMAN/Web-Portfolio.git" target="_blank" class="bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300 block h-[400px] flex flex-col">
         <img src="/src/assets/proyecto-1.jpeg" alt="Portfolio Web" class="w-full h-full object-cover rounded mb-4">
         <h4 class="text-xl font-bold mt-auto">Portfolio Web</h4>
         <p class="text-gray-400 text-sm">Sitio web responsivo desarrollado con HTML, Tailwind CSS y JavaScript...</p>
       </a>
-    </div>
 
-    <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
       <a href="https://github.com/405091-GUZMAN/PremierLeague-Manager.git" target="_blank" class="bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300 block h-[400px] flex flex-col">
         <img src="/src/assets/proyecto-2.jpeg" alt="Portfolio Web" class="w-full h-full object-cover rounded mb-4">
         <h4 class="text-xl font-bold mt-auto">Premier-League Manager</h4>
@@ -144,23 +142,33 @@
   <!-- Sección Contacto -->
   <section id="contacto" class="snap-start min-h-screen flex flex-col justify-center px-6 scroll-mt-24 -mt-32 -pt-12">
     <h2 class="text-3xl font-bold mb-4">Contacto</h2>
-    <form action="#" method="post" class="flex flex-col gap-4">
+    <form  method="POST" id="form" class="flex flex-col gap-4">
+      <input type="hidden" name="access_key" value="aba29d6c-2600-42f3-a629-c1b961c72df5">
+
       <label class="block">
         <span class="text-gray-300">Nombre:</span>
-        <input type="text" id="nombre" name="nombre" required class="w-full p-2 mt-1 bg-gray-800 text-white rounded border border-gray-700">
+        <input type="text" name="name" required class="w-full p-2 mt-1 bg-gray-800 text-white rounded border border-gray-700">
       </label>
+
       <label class="block">
         <span class="text-gray-300">Correo electrónico:</span>
-        <input type="email" id="email" name="email" required class="w-full p-2 mt-1 bg-gray-800 text-white rounded border border-gray-700">
+        <input type="email" name="email" required class="w-full p-2 mt-1 bg-gray-800 text-white rounded border border-gray-700">
       </label>
+
       <label class="block">
         <span class="text-gray-300">Mensaje:</span>
-        <textarea id="mensaje" name="mensaje" rows="5" required class="w-full p-2 mt-1 bg-gray-800 text-white rounded border border-gray-700"></textarea>
+        <textarea name="message" rows="5" required class="w-full p-2 mt-1 bg-gray-800 text-white rounded border border-gray-700"></textarea>
       </label>
+      <input type="checkbox" name="botcheck" style="display:none;">
       <button type="submit" class="w-full bg-gray-800 hover:bg-gray-900 text-white py-2 rounded-lg font-semibold">ENVIAR</button>
+      <div id="result" class="text-sm mt-2 text-center text-emerald-400 font-semibold"></div>
+
     </form>
   </section>
+
+
   </section>
+  <script src="./src/scripts/app.js"></script>
   </main>
 </body>
 </html>
