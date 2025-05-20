@@ -14,9 +14,6 @@
 <body class="relative bg-gray-900 text-white">
 <div class="absolute inset-0 -z-10 w-full min-h-full bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
 
-
-
-<!-- Header -->
 <header class="flex flex-wrap items-center justify-between gap-4 p-4 sm:p-6 fixed top-0 left-0 w-full bg-gray-800 shadow-md z-50">
   <div class="flex items-center gap-4">
     <img src="/src/assets/fotoperfil.jpeg" id="foto_perfil" class="w-20 h-20 rounded-full object-cover -mt-4">
@@ -26,7 +23,6 @@
       <div class="flex justify-center items-center mt-2"><span class="text-sm font-medium me-2 px-2.5 py-0.5 rounded-sm bg-green-900 text-green-300"> Disponible para trabajar  | Open to work </span></div>
     </div>
   </div>
-
 
   <div class="flex gap-4 sm:gap-6 text-white text-4xl sm:text-6xl">
     <a href="https://github.com/405091-GUZMAN" target="_blank" class="hover:text-cyan-400 transition">
@@ -39,21 +35,33 @@
       <i class="fas fa-envelope"></i>
     </a>
   </div>
+
+  <button id="menu-toggle" class="hidden max-sm:block text-white focus:outline-none fixed top-4 right-4 z-50 bg-gray-800 rounded p-2">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+    </svg>
+  </button>
 </header>
 
-<!-- Navegación -->
-<nav class="fixed top-[100px] w-full z-40 bg-gray-700 text-gray-200 flex flex-wrap justify-center gap-4 sm:gap-8 py-3 sm:py-4">
-  <a href="#sobre-mi" class="text-base sm:text-xl lg:text-2xl px-3 py-1 rounded transition hover:shadow-lg hover:bg-gray-800">Sobre mí</a>
-  <a href="#proyectos" class="text-base sm:text-xl lg:text-2xl px-3 py-1 rounded transition hover:shadow-lg hover:bg-gray-800">Proyectos</a>
-  <a href="#contacto" class="text-base sm:text-xl lg:text-2xl px-3 py-1 rounded transition hover:shadow-lg hover:bg-gray-800">Contacto</a>
+<nav class="fixed top-[96px] w-full z-40 bg-gray-700 text-gray-200 justify-center gap-12 py-4 mt-8 -mb-6 hidden md:flex">
+  <a href="#sobre-mi" class="text-3xl text-gray-300 px-4 py-2 rounded transition duration-300 hover:shadow-lg hover:bg-gray-800">Sobre mí</a>
+  <a href="#proyectos" class="text-3xl text-gray-300 px-4 py-2 rounded transition duration-300 hover:shadow-lg hover:bg-gray-800">Proyectos</a>
+  <a href="#contacto" class="text-3xl text-gray-300 px-4 py-2 rounded transition duration-300 hover:shadow-lg hover:bg-gray-800">Contacto</a>
 </nav>
 
+<nav id="mobile-menu" class="fixed top-0 left-0 w-full h-full bg-gray-800 bg-opacity-95 z-40 flex flex-col items-center justify-center md:hidden hidden transition-all duration-300">
+  <a href="#sobre-mi" class="text-3xl text-gray-200 px-4 py-6 hover:text-white transition duration-300">Sobre mí</a>
+  <a href="#proyectos" class="text-3xl text-gray-200 px-4 py-6 hover:text-white transition duration-300">Proyectos</a>
+  <a href="#contacto" class="text-3xl text-gray-200 px-4 py-6 hover:text-white transition duration-300">Contacto</a>
 
+  <button id="close-menu" class="absolute top-6 right-6 text-white">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+    </svg>
+  </button>
+</nav>
 
-
-<!-- Contenido -->
-<main>
-  <!-- Sección Sobre mí -->
+<main class="pt-44">
   <hr class="invisible mb-12">
   <section id="sobre-mi" class="snap-start min-h-screen flex flex-col justify-center px-6 pt-52 scroll-mt-10">
     <div class="flex items-center justify-center gap-4 mb-8 mt-4 text-center">
@@ -116,7 +124,8 @@
     </div>
 
     <hr class="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:via-neutral-400"/>
-  <!-- Sección Proyectos -->
+
+
   <section id="proyectos" class="snap-start min-h-screen flex flex-col justify-center px-6 scroll-mt-24 -mt-32 pt-20">
     <div class="flex items-center justify-center gap-4 mb-4 mt-4">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-12">
@@ -125,7 +134,7 @@
       <h2 class="text-5xl font-bold mb-6 flex gap-x-2  text-white text-center mt-5">Proyectos</h2>
     </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 flex flex-col">
       <a href="https://github.com/405091-GUZMAN/Web-Portfolio.git" target="_blank" class="bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300 block h-[400px] flex flex-col">
         <img src="/src/assets/proyecto-1.jpeg" alt="Portfolio Web" class="w-full h-full object-cover rounded mb-4">
         <h4 class="text-xl font-bold mt-auto">Portfolio Web</h4>
