@@ -43,10 +43,10 @@
   </button>
 </header>
 
-<nav class="fixed top-[96px] w-full z-40 bg-gray-700 text-gray-200 justify-center gap-12 py-4 mt-8 -mb-6 hidden md:flex">
-  <a href="#sobre-mi" class="text-3xl text-gray-300 px-4 py-2 rounded transition duration-300 hover:shadow-lg hover:bg-gray-800">Sobre mí</a>
-  <a href="#proyectos" class="text-3xl text-gray-300 px-4 py-2 rounded transition duration-300 hover:shadow-lg hover:bg-gray-800">Proyectos</a>
-  <a href="#contacto" class="text-3xl text-gray-300 px-4 py-2 rounded transition duration-300 hover:shadow-lg hover:bg-gray-800">Contacto</a>
+<nav class="fixed top-[96px] w-full z-40 bg-gray-700 text-gray-200 justify-center gap-12 py-5 mt-10 -mb-12 hidden md:flex sm:flex">
+  <a href="#sobre-mi" class="text-3xl text-gray-300 px-4 py-4 rounded transition duration-300 hover:shadow-lg hover:bg-gray-800">Sobre mí</a>
+  <a href="#proyectos" class="text-3xl text-gray-300 px-4 py-4 rounded transition duration-300 hover:shadow-lg hover:bg-gray-800">Proyectos</a>
+  <a href="#contacto" class="text-3xl text-gray-300 px-4 py-4 rounded transition duration-300 hover:shadow-lg hover:bg-gray-800">Contacto</a>
 </nav>
 
 <nav id="mobile-menu" class="fixed top-0 left-0 w-full h-full bg-gray-800 bg-opacity-95 z-40 flex flex-col items-center justify-center md:hidden hidden transition-all duration-300">
@@ -95,27 +95,30 @@
         <i class="devicon-microsoftsqlserver-plain-wordmark text-7xl"></i>
         <p class="italic font-bold bg-red-700 mt-2 rounded">‎ Avanzado ‎ </p>
       </div>
-      <div class="flex flex-col items-center">
-        <i class="devicon-javascript-plain colored text-7xl"></i>
-        <p class="italic font-bold bg-amber-400 mt-2 rounded text-black">‎ Intermedio ‎ </p>
+        <div class="flex flex-col items-center gap-x-12 ">
+            <i class="devicon-spring-original-wordmark colored text-7xl"></i>
+            <p class="italic font-bold bg-amber-400 mt-2 rounded text-black">‎ Intermedio ‎ </p>
+        </div>
+
+        <div class="flex flex-col items-center gap-x-12 pt-3">
+          <i class="devicon-typescript-plain colored text-6xl"></i>
+          <p class="italic font-bold bg-amber-400 mt-2 rounded text-black">‎ Intermedio ‎ </p>
       </div>
-      <div class="flex flex-col items-center">
+        <div class="flex flex-col items-center gap-x-12 pt-3">
+            <i class="devicon-angularjs-plain colored text-6xl"></i>
+            <p class="italic font-bold bg-amber-400 mt-2 rounded text-black">‎ Intermedio ‎ </p>
+        </div>
+
+        <div class="flex flex-col items-center">
         <i class="devicon-java-plain colored text-7xl"></i>
         <p class="italic font-bold bg-amber-400 mt-2 rounded text-black">‎ Intermedio ‎ </p>
       </div>
     </div>
     <div class="flex justify-center gap-x-12 pt-3">
-      <div class="flex flex-col items-center">
-        <i class="devicon-tailwindcss-plain-wordmark colored text-7xl"></i>
-        <p class="italic font-bold bg-amber-400 mt-2 rounded text-black">‎ Intermedio ‎ </p>
-      </div>
+
       <div class="flex flex-col items-center">
         <i class="devicon-mongodb-plain-wordmark colored text-7xl"></i>
         <p class="italic font-bold bg-amber-400 mt-2 rounded text-black">‎ Intermedio ‎ </p>
-      </div>
-      <div class="flex flex-col items-center">
-        <i class="devicon-html5-plain-wordmark colored text-7xl"></i>
-        <p class="italic font-bold bg-amber-400 mt-2 rounded text-black"> ‎ Intermedio ‎ </p>
       </div>
       <div class="flex flex-col items-center">
         <i class="devicon-neo4j-plain-wordmark  text-7xl"></i>
@@ -138,20 +141,20 @@
       <a href="https://github.com/405091-GUZMAN/Web-Portfolio.git" target="_blank" class="bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300 block h-[400px] flex flex-col">
         <img src="/src/assets/proyecto-1.jpeg" alt="Portfolio Web" class="w-full h-full object-cover rounded mb-4">
         <h4 class="text-xl font-bold mt-auto">Portfolio Web</h4>
-        <p class="text-gray-400 text-sm">Sitio web responsivo desarrollado con HTML, Tailwind CSS y JavaScript...</p>
+        <p class="text-gray-400 text-sm">Portafolio web desarrollado con HTML, Tailwinds y JS...</p>
       </a>
 
       <a href="https://github.com/405091-GUZMAN/PremierLeague-Manager.git" target="_blank" class="bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300 block h-[400px] flex flex-col">
         <img src="/src/assets/proyecto-2.jpeg" alt="Portfolio Web" class="w-full h-full object-cover rounded mb-4">
         <h4 class="text-xl font-bold mt-auto">Premier-League Manager</h4>
-        <p class="text-gray-400 text-sm">Sitio web con funciones de Login, Register, CRUD en BD y actualizacion en tiempo real de rankings.</p>
+        <p class="text-gray-400 text-sm">Sitio web con funciones de Login, CRUD en BD y actualizacion en tiempo real de rankings.</p>
       </a>
     </div>
 
   </section>
 
   <!-- Sección Contacto -->
-  <section id="contacto" class="snap-start min-h-screen flex flex-col justify-center px-6 scroll-mt-24 -mt-32 -pt-12">
+  <section id="contacto" class="snap-start min-h-screen flex flex-col justify-center px-6 scroll-mt-20 -mt-32  py-12 -pt-12">
     <h2 class="text-3xl font-bold mb-4">Contacto</h2>
     <form  method="POST" id="form" class="flex flex-col gap-4">
       <input type="hidden" name="access_key" value="aba29d6c-2600-42f3-a629-c1b961c72df5">
