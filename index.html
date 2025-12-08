@@ -5,54 +5,116 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio - Guzman Facundo</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="/src/assets/favicon.svg">
+  <style>
+    :root {
+      --accent: #6fb7a6;
+      --accent-2: #7c8ac7;
+      --border: rgba(255, 255, 255, 0.07);
+    }
+    body {
+      font-family: 'Tinos', serif;
+    }
+    .component-shell {
+      background: linear-gradient(135deg, rgba(24, 29, 39, 0.9), rgba(13, 19, 33, 0.82));
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      box-shadow:
+        0 16px 40px rgba(0, 0, 0, 0.2),
+        0 0 0 1px rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(8px);
+    }
+    .accent-bar {
+      height: 4px;
+      width: 84px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      border-radius: 9999px;
+    }
+    .fade-up {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .skill-card {
+      background: rgba(22, 28, 38, 0.95);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+    }
+    .hero-badge {
+      background: rgba(34, 197, 94, 0.12);
+      color: #a7f3d0;
+      border: 1px solid rgba(34, 197, 94, 0.35);
+    }
+    #mobile-menu {
+      opacity: 0;
+      transform: translateY(-12px);
+      pointer-events: none;
+      transition: opacity .3s ease, transform .3s ease;
+    }
+    #mobile-menu.open {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+  </style>
 </head>
 <body class="relative bg-gray-900 text-white">
-<div class="absolute inset-0 -z-10 w-full min-h-full bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
+<div class="absolute inset-0 -z-10 w-full min-h-full bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.12),rgba(255,255,255,0))]"></div>
 
-<header class="flex flex-wrap items-center justify-between gap-4 p-4 sm:p-6 fixed top-0 left-0 w-full bg-gray-800 shadow-md z-50">
-  <div class="flex items-center gap-4">
-    <img src="/src/assets/fotoperfil.jpeg" id="foto_perfil" class="w-20 h-20 rounded-full object-cover -mt-4">
-    <div class="flex flex-col">
+<header class="component-shell fixed top-4 left-1/2 -translate-x-1/2 w-[94%] max-w-6xl px-4 sm:px-6 py-4 md:py-6 flex flex-wrap items-center justify-between gap-4 z-50">
+  <div class="flex items-center gap-4 flex-1 min-w-[240px]">
+    <img src="/src/assets/fotoperfil.jpeg" id="foto_perfil" class="w-16 h-16 sm:w-20 sm:h-20 rounded-full object-cover border border-emerald-200/40">
+    <div class="flex flex-col gap-1">
+      <p class="text-sm uppercase tracking-[0.2em] text-emerald-100">Full Stack Developer</p>
       <h1 class="text-3xl font-bold leading-tight">Guzman Facundo</h1>
-      <h3 class="text-xl font-semibold text-gray-300 ml-1">FullStack Developer</h3>
-      <div class="flex justify-center items-center mt-2"><span class="text-sm font-medium me-2 px-2.5 py-0.5 rounded-sm bg-green-900 text-green-300"> Disponible para trabajar  | Open to work </span></div>
+      <div class="flex items-center gap-2">
+        <span class="hero-badge text-xs sm:text-sm px-3 py-1 inline-flex items-center gap-1 rounded-none">
+          <span class="h-2 w-2 bg-emerald-300 rounded-full animate-pulse"></span>
+          Disponible | Open to work
+        </span>
+      </div>
     </div>
   </div>
 
-  <div class="flex gap-4 sm:gap-6 text-white text-4xl sm:text-6xl">
-    <a href="https://github.com/405091-GUZMAN" target="_blank" class="hover:text-cyan-400 transition">
+  <nav class="hidden md:flex items-center gap-6 text-lg">
+    <a href="#sobre-mi" class="text-gray-200 hover:text-emerald-200 transition-colors">Sobre mi</a>
+    <a href="#habilidades" class="text-gray-200 hover:text-emerald-200 transition-colors">Habilidades</a>
+    <a href="#proyectos" class="text-gray-200 hover:text-emerald-200 transition-colors">Proyectos</a>
+    <a href="#contacto" class="text-gray-200 hover:text-emerald-200 transition-colors">Contacto</a>
+  </nav>
+
+  <div class="flex items-center gap-4 text-2xl sm:text-3xl">
+    <a href="https://github.com/FacuGuz" target="_blank" class="hover:text-emerald-300 transition-colors">
       <i class="fab fa-github"></i>
     </a>
-    <a href="https://www.linkedin.com/in/facundo-guzman-b81a612a0" target="_blank" class="hover:text-cyan-400 transition">
+    <a href="https://www.linkedin.com/in/facundo-guzman-b81a612a0" target="_blank" class="hover:text-emerald-300 transition-colors">
       <i class="fab fa-linkedin"></i>
     </a>
-    <a href="mailto:guzmanfacu02@hotmail.com" class="hover:text-cyan-400 transition">
+    <a href="mailto:guzmanfacu02@hotmail.com" class="hover:text-emerald-300 transition-colors">
       <i class="fas fa-envelope"></i>
     </a>
+    <button id="menu-toggle" class="md:hidden text-white focus:outline-none rounded p-2 border border-white/10 hover:border-white/30">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
   </div>
-
-  <button id="menu-toggle" class="hidden max-sm:block text-white focus:outline-none fixed top-4 right-4 z-50 bg-gray-800 rounded p-2">
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-    </svg>
-  </button>
 </header>
 
-<nav class="fixed top-[96px] w-full z-40 bg-gray-700 text-gray-200 justify-center gap-12 py-5 mt-10 -mb-12 hidden md:flex sm:flex">
-  <a href="#sobre-mi" class="text-3xl text-gray-300 px-4 py-4 rounded transition duration-300 hover:shadow-lg hover:bg-gray-800">Sobre mí</a>
-  <a href="#proyectos" class="text-3xl text-gray-300 px-4 py-4 rounded transition duration-300 hover:shadow-lg hover:bg-gray-800">Proyectos</a>
-  <a href="#contacto" class="text-3xl text-gray-300 px-4 py-4 rounded transition duration-300 hover:shadow-lg hover:bg-gray-800">Contacto</a>
-</nav>
-
-<nav id="mobile-menu" class="fixed top-0 left-0 w-full h-full bg-gray-800 bg-opacity-95 z-40 flex flex-col items-center justify-center md:hidden hidden transition-all duration-300">
-  <a href="#sobre-mi" class="text-3xl text-gray-200 px-4 py-6 hover:text-white transition duration-300">Sobre mí</a>
-  <a href="#proyectos" class="text-3xl text-gray-200 px-4 py-6 hover:text-white transition duration-300">Proyectos</a>
-  <a href="#contacto" class="text-3xl text-gray-200 px-4 py-6 hover:text-white transition duration-300">Contacto</a>
+<nav id="mobile-menu" class="fixed top-0 left-0 w-full h-full bg-gray-900/95 z-40 flex flex-col items-center justify-center md:hidden">
+  <a href="#sobre-mi" class="text-3xl text-gray-200 px-4 py-4 hover:text-white transition duration-300">Sobre mi</a>
+  <a href="#habilidades" class="text-3xl text-gray-200 px-4 py-4 hover:text-white transition duration-300">Habilidades</a>
+  <a href="#proyectos" class="text-3xl text-gray-200 px-4 py-4 hover:text-white transition duration-300">Proyectos</a>
+  <a href="#contacto" class="text-3xl text-gray-200 px-4 py-4 hover:text-white transition duration-300">Contacto</a>
 
   <button id="close-menu" class="absolute top-6 right-6 text-white">
     <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -61,135 +123,192 @@
   </button>
 </nav>
 
-<main class="pt-44">
-  <hr class="invisible mb-12">
-  <section id="sobre-mi" class="snap-start min-h-screen flex flex-col justify-center px-6 pt-52 scroll-mt-10">
-    <div class="flex items-center justify-center gap-4 mb-8 mt-4 text-center">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-12">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-      </svg>
-    <h2 class="text-5xl font-bold flex gap-x-2 text-center text-white ">
-      Sobre mí
-    </h2>
-    </div>
-    <div class="text-center text-lg lg:text-2xl text-pretty text-white">
-    <p class="text-md lg:text-2xl text-pretty text-white" >Soy estudiante de la Tecnicatura Universitaria en Programación en la UTN FRC, con una sólida base en desarrollo de software y un enfoque práctico en la resolución de problemas, tambien asi contando con un nivel avanzado del ingles. A lo largo de mi formación académica he adquirido experiencia trabajando con diversos lenguajes y tecnologías, tanto del lado del frontend como del backend.</p>
-    <p class=" lg:text-2xl text-pretty text-white mt-4 text-center">Me considero una persona proactiva, con ganas de seguir aprendiendo y aplicando buenas prácticas de programación en proyectos reales. Estoy en búsqueda de oportunidades que me permitan seguir creciendo profesionalmente y aportar valor desde mis habilidades técnicas y mi compromiso con el aprendizaje constante.</p>
-    </div>
-    <hr class="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:via-neutral-400" />
-    <div class="flex items-center justify-center gap-4 mb-4 mt-4">
-      <svg class="w-12 h-12 fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 392.186 392.186">
-        <path d="M368.62,17.951H23.568C10.57,17.951,0,28.524,0,41.52v309.146c0,12.996,10.57,23.568,23.568,23.568h345.053 c12.994,0,23.564-10.572,23.564-23.568V41.52C392.188,28.525,381.614,17.951,368.62,17.951z M297.56,57.528 c0-4.806,3.896-8.703,8.701-8.703h8.703c4.808,0,8.701,3.896,8.701,8.703v9.863c0,4.806-3.896,8.702-8.701,8.702h-8.703 c-4.805,0-8.701-3.896-8.701-8.702V57.528z M257.093,57.528c0-4.806,3.898-8.703,8.703-8.703h8.701 c4.805,0,8.703,3.896,8.703,8.703v9.863c0,4.806-3.898,8.702-8.703,8.702h-8.701c-4.805,0-8.703-3.896-8.703-8.702V57.528z M363.903,345.951H28.282V102.235h335.621V345.951L363.903,345.951z M364.132,67.391c0,4.806-3.896,8.702-8.701,8.702h-8.703 c-4.809,0-8.702-3.896-8.702-8.702v-9.863c0-4.806,3.896-8.703,8.702-8.703h8.703c4.806,0,8.701,3.896,8.701,8.703V67.391z"></path>
-        <path d="M84.185,233.284l63.084,29.336c1.631,0.755,3.367,1.138,5.162,1.138c2.338,0,4.617-0.664,6.598-1.924 c3.547-2.267,5.666-6.13,5.666-10.334v-0.322c0-4.752-2.785-9.116-7.096-11.118l-39.455-18.332l39.455-18.334 c4.311-2.004,7.096-6.367,7.096-11.117v-0.319c0-4.21-2.119-8.075-5.666-10.334c-1.961-1.253-4.246-1.916-6.605-1.916 c-1.779,0-3.563,0.391-5.16,1.133l-63.08,29.333c-4.307,2.004-7.09,6.369-7.09,11.117v0.877 C77.093,226.909,79.874,231.272,84.185,233.284z"></path>
-        <path d="M165.257,293.036c2.301,3.149,6.002,5.03,9.9,5.03h0.316c5.352,0,10.041-3.426,11.672-8.517L228.7,160.788 c1.192-3.716,0.531-7.818-1.771-10.973c-2.301-3.15-6.002-5.03-9.901-5.03h-0.315c-5.354,0-10.048,3.425-11.679,8.516 l-41.559,128.771C162.292,285.793,162.958,289.889,165.257,293.036z"></path>
-        <path d="M227.49,192.276c0,4.745,2.783,9.109,7.095,11.123l39.455,18.329l-39.455,18.33c-4.31,2.004-7.095,6.368-7.095,11.118 v0.322c0,4.205,2.117,8.068,5.668,10.336c1.974,1.258,4.254,1.924,6.595,1.924c1.793,0,3.528-0.383,5.17-1.142l63.08-29.335 c4.307-2.009,7.09-6.372,7.09-11.115v-0.877c0-4.748-2.783-9.113-7.094-11.117l-63.08-29.333 c-1.591-0.74-3.373-1.131-5.152-1.131c-2.355,0-4.643,0.661-6.604,1.912c-3.551,2.263-5.67,6.127-5.67,10.337v0.318H227.49 L227.49,192.276z"></path>
-      </svg>
-    <h2 class="text-5xl font-bold mb-4 mt-4  ">  Hard Skills / Herramientas</h2>
-    </div>
-    <div class="flex justify-center gap-x-12 pt-3 ">
-      <div class="flex flex-col items-center">
-        <i class="devicon-csharp-plain text-7xl"></i>
-        <p class="italic font-bold bg-red-700 mt-2 rounded">‎ Avanzado ‎ </p>
+<main class="pt-36 sm:pt-40 md:pt-44 pb-20 px-4 sm:px-6">
+  <section id="sobre-mi" data-component="about-hero" class="component-shell max-w-6xl mx-auto p-6 sm:p-10 space-y-6 fade-up scroll-mt-28">
+    <div class="space-y-5 text-center">
+      <h2 class="text-4xl sm:text-5xl font-bold leading-tight text-emerald-100">Sobre mi</h2>
+      <p class="text-lg text-gray-200 leading-relaxed">Soy estudiante de la Tecnicatura Universitaria en Programacion en la UTN FRC, con una solida base en desarrollo de software y un enfoque practico en la resolucion de problemas, tambien contando con un nivel avanzado de ingles. A lo largo de mi formacion academica he adquirido experiencia trabajando con diversos lenguajes y tecnologas, tanto del lado del frontend como del backend.</p>
+      <p class="text-lg text-gray-200 leading-relaxed">Me considero una persona proactiva, con ganas de seguir aprendiendo y aplicando buenas practicas de programacion en proyectos reales. Estoy en busqueda de oportunidades que me permitan seguir creciendo profesionalmente y aportar valor desde mis habilidades tecnicas y mi compromiso con el aprendizaje constante. Experiencia en REST APIs, microservicios, seguridad con JWT y Spring Security, integraciones con Google OAuth y MercadoPago, y diseño de esquemas relacionales.</p>
+      <div class="flex flex-wrap gap-3 justify-center">
+        <span class="px-3 py-1 bg-slate-800 text-slate-200 text-sm">Ingles avanzado</span>
+        <span class="px-3 py-1 bg-slate-800 text-slate-200 text-sm">Trabajo en equipo</span>
+        <span class="px-3 py-1 bg-slate-800 text-slate-200 text-sm">Resolucion de problemas</span>
+        <span class="px-3 py-1 bg-slate-800 text-slate-200 text-sm">Trabajador proactivo</span>
       </div>
-      <div class="flex flex-col items-center">
-        <i class="devicon-microsoftsqlserver-plain-wordmark text-7xl"></i>
-        <p class="italic font-bold bg-red-700 mt-2 rounded">‎ Avanzado ‎ </p>
+      <div class="flex flex-wrap gap-3">
+        <a href="#contacto" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-700 text-white font-semibold shadow-md shadow-emerald-800/30 hover:-translate-y-0.5 transition">
+          Contactame
+          <i class="fa-solid fa-arrow-right text-sm"></i>
+        </a>
+        <a href="#proyectos" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-white/15 text-white hover:border-emerald-200/60 hover:-translate-y-0.5 transition">
+          Ver proyectos
+        </a>
       </div>
-        <div class="flex flex-col items-center gap-x-12 ">
-            <i class="devicon-spring-original-wordmark colored text-7xl"></i>
-            <p class="italic font-bold bg-amber-400 mt-2 rounded text-black">‎ Intermedio ‎ </p>
+    </div>
+  </section>
+
+  <section id="habilidades" data-component="skills" class="max-w-6xl mx-auto fade-up scroll-mt-24 mt-16 sm:mt-20">
+    <div class="flex items-center justify-between flex-wrap gap-4 mb-6">
+      <div>
+        <p class="text-emerald-200 uppercase tracking-[0.25em] text-sm">Stack principal</p>
+        <h3 class="text-3xl sm:text-4xl font-bold text-emerald-100">Hard Skills / Herramientas</h3>
+      </div>
+      <div class="accent-bar"></div>
+    </div>
+    <div class="grid gap-4 sm:gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+      <div class="skill-card p-4 sm:p-5 flex items-start gap-4 hover:-translate-y-1 transition-transform duration-300">
+        <i class="devicon-java-plain colored text-5xl"></i>
+        <div>
+          <p class="text-xl font-semibold">Java</p>
+            <p class="text-sm text-gray-300">Servicios backend, APIs REST y pruebas automatizadas.</p>
         </div>
-
-        <div class="flex flex-col items-center gap-x-12 pt-3">
-          <i class="devicon-typescript-plain colored text-6xl"></i>
-          <p class="italic font-bold bg-amber-400 mt-2 rounded text-black">‎ Intermedio ‎ </p>
       </div>
-        <div class="flex flex-col items-center gap-x-12 pt-3">
-            <i class="devicon-angularjs-plain colored text-6xl"></i>
-            <p class="italic font-bold bg-amber-400 mt-2 rounded text-black">‎ Intermedio ‎ </p>
+      <div class="skill-card p-4 sm:p-5 flex items-start gap-4 hover:-translate-y-1 transition-transform duration-300">
+        <i class="devicon-spring-plain colored text-5xl"></i>
+        <div>
+          <p class="text-xl font-semibold">Spring Boot</p>
+            <p class="text-sm text-gray-300">Microservicios seguros, JPA y documentacio;n con Swagger.</p>
         </div>
-
-        <div class="flex flex-col items-center">
-        <i class="devicon-java-plain colored text-7xl"></i>
-        <p class="italic font-bold bg-amber-400 mt-2 rounded text-black">‎ Intermedio ‎ </p>
+      </div>
+      <div class="skill-card p-4 sm:p-5 flex items-start gap-4 hover:-translate-y-1 transition-transform duration-300">
+        <i class="devicon-angularjs-plain colored text-5xl"></i>
+        <div>
+          <p class="text-xl font-semibold">Angular</p>
+            <p class="text-sm text-gray-300">SPA modulares, routing y RxJS para datos en vivo.</p>
+        </div>
+      </div>
+      <div class="skill-card p-4 sm:p-5 flex items-start gap-4 hover:-translate-y-1 transition-transform duration-300">
+        <i class="devicon-typescript-plain colored text-5xl"></i>
+        <div>
+          <p class="text-xl font-semibold">TypeScript</p>
+            <p class="text-sm text-gray-300">Lo;gica de frontend tipada y mantenible.</p>
+        </div>
+      </div>
+      <div class="skill-card p-4 sm:p-5 flex items-start gap-4 hover:-translate-y-1 transition-transform duration-300">
+        <i class="fa-solid fa-database text-5xl text-emerald-200"></i>
+        <div>
+          <p class="text-xl font-semibold">SQL</p>
+            <p class="text-sm text-gray-300">Consultas, modelos relacionales e indices.</p>
+        </div>
+      </div>
+      <div class="skill-card p-4 sm:p-5 flex items-start gap-4 hover:-translate-y-1 transition-transform duration-300">
+        <i class="devicon-postgresql-plain colored text-5xl"></i>
+        <div>
+          <p class="text-xl font-semibold">PostgreSQL</p>
+            <p class="text-sm text-gray-300">Esquemas, vistas y funciones transaccionales.</p>
+        </div>
+      </div>
+      <div class="skill-card p-4 sm:p-5 flex items-start gap-4 hover:-translate-y-1 transition-transform duration-300">
+        <i class="devicon-docker-plain colored text-5xl"></i>
+        <div>
+          <p class="text-xl font-semibold">Docker</p>
+            <p class="text-sm text-gray-300">Contenedores, docker-compose y despliegues rapidos.</p>
+        </div>
       </div>
     </div>
-    <div class="flex justify-center gap-x-12 pt-3">
+  </section>
 
-      <div class="flex flex-col items-center">
-        <i class="devicon-mongodb-plain-wordmark colored text-7xl"></i>
-        <p class="italic font-bold bg-amber-400 mt-2 rounded text-black">‎ Intermedio ‎ </p>
+  <section id="proyectos" data-component="projects" class="max-w-6xl mx-auto mt-16 fade-up scroll-mt-24">
+    <div class="flex items-center justify-between flex-wrap gap-4 mb-6">
+      <div>
+        <p class="text-emerald-200 uppercase tracking-[0.25em] text-sm">Proyectos recientes</p>
+        <h3 class="text-3xl sm:text-4xl font-bold text-emerald-100">Proyectos</h3>
       </div>
-      <div class="flex flex-col items-center">
-        <i class="devicon-neo4j-plain-wordmark  text-7xl"></i>
-        <p class="italic font-bold bg-green-900 mt-2 rounded"> ‎ ‎  Basico   ‎ ‎ </p>
-      </div>
+      <div class="accent-bar"></div>
     </div>
 
-    <hr class="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:via-neutral-400"/>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <a href="https://github.com/FacuGuz/hospital-turn-manager" target="_blank" class="component-shell p-4 sm:p-5 rounded-2xl hover:-translate-y-2 transition-transform duration-300 flex flex-col gap-4">
+          <div class="overflow-hidden rounded-xl h-48">
+            <img src="/src/assets/hospital-turn-manager.jpg" alt="Hospital Turn Manager" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="flex-1 flex flex-col gap-2">
+            <h4 class="text-xl font-semibold">Hospital Turn Manager</h4>
+            <p class="text-gray-300 text-sm leading-relaxed flex-1">Gestor de turnos con REST APIs, seguridad JWT y flujos administrativos.</p>
+            <span class="text-xs text-slate-300">Spring Boot . JWT . PostgreSQL</span>
+          </div>
+        </a>
 
 
-  <section id="proyectos" class="snap-start min-h-screen flex flex-col justify-center px-6 scroll-mt-24 -mt-32 pt-20">
-    <div class="flex items-center justify-center gap-4 mb-4 mt-4">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-12">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12.75V12A2.25 2.25 0 0 1 4.5 9.75h15A2.25 2.25 0 0 1 21.75 12v.75m-8.69-6.44-2.12-2.12a1.5 1.5 0 0 0-1.061-.44H4.5A2.25 2.25 0 0 0 2.25 6v12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9a2.25 2.25 0 0 0-2.25-2.25h-5.379a1.5 1.5 0 0 1-1.06-.44Z" />
-      </svg>
-      <h2 class="text-5xl font-bold mb-6 flex gap-x-2  text-white text-center mt-5">Proyectos</h2>
-    </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 flex flex-col">
-      <a href="https://github.com/405091-GUZMAN/Web-Portfolio.git" target="_blank" class="bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300 block h-[400px] flex flex-col">
-        <img src="/src/assets/proyecto-1.jpeg" alt="Portfolio Web" class="w-full h-full object-cover rounded mb-4">
-        <h4 class="text-xl font-bold mt-auto">Portfolio Web</h4>
-        <p class="text-gray-400 text-sm">Portafolio web desarrollado con HTML, Tailwinds y JS...</p>
+        <a href="https://github.com/FacuGuz/e-commerce-with-admin-dashboard.git" target="_blank" class="component-shell p-4 sm:p-5 rounded-2xl hover:-translate-y-2 transition-transform duration-300 flex flex-col gap-4">
+          <div class="overflow-hidden rounded-xl h-48">
+            <img src="/src/assets/proyecto-3.jpeg" alt="E-Commerce" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="flex-1 flex flex-col gap-2">
+            <h4 class="text-xl font-semibold">E-commerce</h4>
+            <p class="text-gray-300 text-sm leading-relaxed flex-1">Carrito, checkout con MercadoPago y panel admin para productos y usuarios.</p>
+            <span class="text-xs text-slate-300">Angular . Spring . PostgreSQL</span>
+          </div>
+        </a>
+
+
+
+        <a href="https://github.com/405091-GUZMAN/Web-Portfolio.git" target="_blank" class="component-shell p-4 sm:p-5 rounded-2xl hover:-translate-y-2 transition-transform duration-300 flex flex-col gap-4">
+          <div class="overflow-hidden rounded-xl h-48">
+            <img src="/src/assets/proyecto-1.jpeg" alt="Portfolio Web" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+          </div>
+        <div class="flex-1 flex flex-col gap-2">
+          <h4 class="text-xl font-semibold">Portfolio Web</h4>
+          <p class="text-gray-300 text-sm leading-relaxed flex-1">Sitio personal con Tailwind y JS, optimizado para contar mi historia y stack.</p>
+          <span class="text-xs text-slate-300">HTML . Tailwind . JS</span>
+        </div>
       </a>
 
-      <a href="https://github.com/405091-GUZMAN/PremierLeague-Manager.git" target="_blank" class="bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300 block h-[400px] flex flex-col">
-        <img src="/src/assets/proyecto-2.jpeg" alt="Portfolio Web" class="w-full h-full object-cover rounded mb-4">
-        <h4 class="text-xl font-bold mt-auto">Premier-League Manager</h4>
-        <p class="text-gray-400 text-sm">Sitio web con funciones de Login, CRUD en BD y actualizacion en tiempo real de rankings.</p>
+      <a href="https://github.com/405091-GUZMAN/PremierLeague-Manager.git" target="_blank" class="component-shell p-4 sm:p-5 rounded-2xl hover:-translate-y-2 transition-transform duration-300 flex flex-col gap-4">
+        <div class="overflow-hidden rounded-xl h-48">
+          <img src="/src/assets/proyecto-2.jpeg" alt="Premier League Manager" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+        </div>
+        <div class="flex-1 flex flex-col gap-2">
+          <h4 class="text-xl font-semibold">Premier League Manager</h4>
+          <p class="text-gray-300 text-sm leading-relaxed flex-1">Login, CRUD en base de datos y ranking en tiempo real para gestionar equipos.</p>
+          <span class="text-xs text-slate-300">Angular . Node . SQL</span>
+        </div>
       </a>
 
-        <a href="https://github.com/FacuGuz/e-commerce-with-admin-dashboard.git" target="_blank" class="bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300 block h-[400px] flex flex-col">
-            <img src="/src/assets/proyecto-3.jpeg" alt="E-Commerce" class="w-full h-full object-cover rounded mb-4">
-            <h4 class="text-xl font-bold mt-auto">Pagina de e-commerce.</h4>
-            <p class="text-gray-400 text-sm">E-commerce completo con panel de administración, gestión de productos, categorías y usuarios, carrito de compras, checkout con MercadoPago y sistema de autenticación.</p>        </a>
 
 
+
+      </div>
+    </section>
+
+  <section id="contacto" data-component="contact" class="max-w-6xl mx-auto mt-16 fade-up scroll-mt-24">
+    <div class="component-shell p-6 sm:p-8 rounded-2xl">
+      <div class="flex items-center justify-between flex-wrap gap-4 mb-6">
+        <div>
+          <p class="text-emerald-200 uppercase tracking-[0.25em] text-sm">Hablemos</p>
+          <h3 class="text-3xl sm:text-4xl font-bold text-emerald-100">Contacto</h3>
+        </div>
+        <div class="accent-bar"></div>
+      </div>
+      <form method="POST" id="form" class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+        <input type="hidden" name="access_key" value="aba29d6c-2600-42f3-a629-c1b961c72df5">
+        <label class="block space-y-2">
+          <span class="text-gray-300">Nombre</span>
+          <input type="text" name="name" required class="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-700 focus:border-cyan-400 outline-none transition">
+        </label>
+
+        <label class="block space-y-2">
+          <span class="text-gray-300">Correo electronico</span>
+          <input type="email" name="email" required class="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-700 focus:border-cyan-400 outline-none transition">
+        </label>
+
+        <label class="block space-y-2 md:col-span-2">
+          <span class="text-gray-300">Mensaje</span>
+          <textarea name="message" rows="5" required class="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-700 focus:border-cyan-400 outline-none transition"></textarea>
+        </label>
+        <input type="checkbox" name="botcheck" class="hidden">
+
+        <div class="md:col-span-2 flex flex-col gap-3">
+          <button type="submit" class="w-full md:w-auto px-6 py-3 bg-cyan-500 text-gray-900 font-semibold rounded-lg shadow-lg shadow-cyan-500/30 hover:-translate-y-0.5 transition">Enviar mensaje</button>
+          <div id="result" class="text-sm text-center text-emerald-400 font-semibold"></div>
+        </div>
+      </form>
     </div>
-
   </section>
+</main>
 
-  <!-- Sección Contacto -->
-  <section id="contacto" class="snap-start min-h-screen flex flex-col justify-center px-6 scroll-mt-20 -mt-32  py-12 -pt-12">
-    <h2 class="text-3xl font-bold mb-4">Contacto</h2>
-    <form  method="POST" id="form" class="flex flex-col gap-4">
-      <input type="hidden" name="access_key" value="aba29d6c-2600-42f3-a629-c1b961c72df5">
-
-      <label class="block">
-        <span class="text-gray-300">Nombre:</span>
-        <input type="text" name="name" required class="w-full p-2 mt-1 bg-gray-800 text-white rounded border border-gray-700">
-      </label>
-
-      <label class="block">
-        <span class="text-gray-300">Correo electrónico:</span>
-        <input type="email" name="email" required class="w-full p-2 mt-1 bg-gray-800 text-white rounded border border-gray-700">
-      </label>
-
-      <label class="block">
-        <span class="text-gray-300">Mensaje:</span>
-        <textarea name="message" rows="5" required class="w-full p-2 mt-1 bg-gray-800 text-white rounded border border-gray-700"></textarea>
-      </label>
-      <input type="checkbox" name="botcheck" style="display:none;">
-      <button type="submit" class="w-full bg-gray-800 hover:bg-gray-900 text-white py-2 rounded-lg font-semibold">ENVIAR</button>
-      <div id="result" class="text-sm mt-2 text-center text-emerald-400 font-semibold"></div>
-
-    </form>
-  </section>
-
-
-  </section>
-  <script src="./src/scripts/app.js"></script>
-  </main>
+<script src="./src/scripts/app.js"></script>
 </body>
 </html>
