@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Facundo Guzmán · Desarrollador Full Stack</title>
-  <meta name="description" content="Desarrollador Full Stack con Java, Spring Boot y Angular. Creador de Chirolas, un sistema de punto de venta en producción para kioscos y minimarkets.">
+  <meta name="description" content="Desarrollador Full Stack. Java, Spring Boot y Angular.">
   <link rel="canonical" href="https://guzmanfacundo.netlify.app/">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://guzmanfacundo.netlify.app/">
   <meta property="og:title" content="Facundo Guzmán · Desarrollador Full Stack">
-  <meta property="og:description" content="Java, Spring Boot y Angular. Creador de Chirolas, un punto de venta en producción para kioscos y minimarkets.">
+  <meta property="og:description" content="Desarrollador Full Stack. Java, Spring Boot y Angular.">
   <meta property="og:image" content="https://guzmanfacundo.netlify.app/og.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#fafaf9">
@@ -18,145 +18,71 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css">
   <link rel="stylesheet" href="/src/styles/main.css">
 </head>
 <body>
 
-<header class="sticky top-0 z-50 border-b border-line bg-bg/90 backdrop-blur">
-  <div class="container-page flex h-14 items-center justify-between text-sm">
-    <a href="#inicio" class="font-medium">Facundo Guzmán</a>
-    <nav class="flex items-center gap-5 text-muted" aria-label="Principal">
-      <a href="#proyectos" class="hidden hover:text-ink sm:inline">Proyectos</a>
-      <a href="#stack" class="hidden hover:text-ink sm:inline">Stack</a>
-      <a href="#contacto" class="hover:text-ink">Contacto</a>
-      <a href="https://github.com/FacuGuz" target="_blank" rel="noopener" aria-label="GitHub" class="hover:text-ink"><i class="fab fa-github text-base"></i></a>
-      <a href="https://www.linkedin.com/in/facundo-guzman-b81a612a0" target="_blank" rel="noopener" aria-label="LinkedIn" class="hover:text-ink"><i class="fab fa-linkedin text-base"></i></a>
-    </nav>
-  </div>
-</header>
-
-<main id="inicio" class="container-page">
+<main class="container-page py-16 sm:py-24">
 
   <!-- Intro -->
-  <section class="py-16 sm:py-24">
-    <div class="flex items-center gap-4">
-      <img src="/src/assets/fotoperfil.jpeg" alt="Facundo Guzmán" class="h-14 w-14 rounded-full object-cover" width="56" height="56">
-      <div>
-        <h1 class="text-lg font-medium">Facundo Guzmán</h1>
-        <p class="text-sm text-muted">Desarrollador Full Stack · Córdoba, Argentina</p>
+  <section class="flex items-start gap-4">
+    <img src="/src/assets/fotoperfil.jpeg" alt="Facundo Guzmán" class="h-12 w-12 rounded-full object-cover" width="48" height="48">
+    <div>
+      <h1 class="text-xl font-medium">Facundo Guzmán</h1>
+      <p class="text-muted">Desarrollador Full Stack</p>
+      <p class="mt-4 max-w-xl text-sm text-muted">Estudiante de la Tecnicatura Universitaria en Programación (UTN FRC). Inglés avanzado. Disponible para trabajar.</p>
+      <div class="mt-4 flex flex-wrap gap-x-5 gap-y-1 text-sm">
+        <a href="mailto:guzmanfacu02@hotmail.com" class="link">Email</a>
+        <a href="https://www.linkedin.com/in/facundo-guzman-b81a612a0" target="_blank" rel="noopener" class="link">LinkedIn</a>
+        <a href="https://github.com/FacuGuz" target="_blank" rel="noopener" class="link">GitHub</a>
       </div>
-    </div>
-    <p class="mt-8 max-w-2xl text-3xl font-medium leading-tight tracking-tight sm:text-4xl">
-      Desarrollo aplicaciones web con Java, Spring Boot y Angular.
-    </p>
-    <p class="mt-4 max-w-2xl text-lg text-muted">
-      Creador de <a href="#chirolas" class="text-ink underline underline-offset-4">Chirolas</a>, un punto de venta en producción para kioscos y minimarkets.
-    </p>
-    <div class="mt-8 flex flex-wrap gap-3">
-      <a href="#contacto" class="btn-primary">Contactame</a>
-      <a href="https://www.linkedin.com/in/facundo-guzman-b81a612a0" target="_blank" rel="noopener" class="btn-ghost">LinkedIn</a>
-    </div>
-  </section>
-
-  <!-- Proyectos -->
-  <section id="proyectos" class="border-t border-line py-16">
-    <h2 class="section-label">Proyectos</h2>
-
-    <article id="chirolas" class="mt-8 grid gap-8 lg:grid-cols-[1.2fr_1fr] lg:items-center">
-      <img src="/src/assets/chirolas/pos-real-use.webp" alt="Chirolas funcionando en un mostrador" class="w-full rounded-lg border border-line" width="1024" height="503" loading="lazy">
-      <div>
-        <p class="text-sm text-muted">Proyecto propio · En producción</p>
-        <h3 class="mt-1 text-2xl font-medium">Chirolas App</h3>
-        <p class="mt-3 text-muted">Sistema de punto de venta SaaS para kioscos y minimarkets.</p>
-        <ul class="mt-4 space-y-1.5 text-sm text-muted">
-          <li>— Cobros con QR y Point de Mercado Pago</li>
-          <li>— Caja, stock y estadísticas de ventas</li>
-          <li>— Multi-local, roles y suscripciones</li>
-          <li>— Funciona offline como PWA</li>
-        </ul>
-        <p class="mt-4 text-sm text-faint">Angular · Spring Boot · PostgreSQL · Mercado Pago</p>
-        <div class="mt-5 flex gap-5 text-sm">
-          <a href="https://www.chirolaspv.com.ar/" target="_blank" rel="noopener" class="link">Ver sitio ↗</a>
-          <a href="https://www.instagram.com/chirolaspv" target="_blank" rel="noopener" class="link">Instagram ↗</a>
-        </div>
-      </div>
-    </article>
-
-    <div class="mt-14 grid gap-8 sm:grid-cols-2">
-      <article>
-        <img src="/src/assets/hospital-turn-manager.jpg" alt="Hospital Turn Manager" class="aspect-[16/9] w-full rounded-lg border border-line object-cover" loading="lazy">
-        <h3 class="mt-4 font-medium">Hospital Turn Manager</h3>
-        <p class="mt-1 text-sm text-muted">Gestor de turnos médicos con API REST y JWT.</p>
-        <p class="mt-2 text-sm text-faint">Spring Boot · PostgreSQL · Angular</p>
-        <a href="https://github.com/FacuGuz/hospital-turn-manager" target="_blank" rel="noopener" class="link mt-3 inline-block text-sm">Código ↗</a>
-      </article>
-      <article>
-        <img src="/src/assets/proyectoflowdeck.png" alt="FlowDeck" class="aspect-[16/9] w-full rounded-lg border border-line object-cover" loading="lazy">
-        <h3 class="mt-4 font-medium">FlowDeck</h3>
-        <p class="mt-1 text-sm text-muted">Tablero Kanban colaborativo para equipos.</p>
-        <p class="mt-2 text-sm text-faint">Spring Boot · Angular · REST API</p>
-        <a href="https://github.com/FacuGuz/FlowDeck-" target="_blank" rel="noopener" class="link mt-3 inline-block text-sm">Código ↗</a>
-      </article>
-    </div>
-
-    <div class="mt-14">
-      <h3 class="text-sm text-muted">Sitios para clientes</h3>
-      <ul class="mt-3 divide-y divide-line border-y border-line text-sm">
-        <li><a href="https://seiba-restobar.vercel.app" target="_blank" rel="noopener" class="flex justify-between py-3 hover:text-muted"><span>SEIBA Restobar</span><span class="text-faint">Restobar ↗</span></a></li>
-        <li><a href="https://adal-seguridad.vercel.app" target="_blank" rel="noopener" class="flex justify-between py-3 hover:text-muted"><span>Adal Seguridad</span><span class="text-faint">Empresa de seguridad ↗</span></a></li>
-        <li><a href="https://campestre-polleria.vercel.app" target="_blank" rel="noopener" class="flex justify-between py-3 hover:text-muted"><span>Campestre Pollería</span><span class="text-faint">Pollería ↗</span></a></li>
-      </ul>
     </div>
   </section>
 
   <!-- Stack -->
-  <section id="stack" class="border-t border-line py-16">
+  <section class="mt-16">
     <h2 class="section-label">Stack</h2>
-    <dl class="mt-8 grid gap-6 text-sm sm:grid-cols-2">
-      <div><dt class="text-muted">Backend</dt><dd class="mt-1">Java, Spring Boot, Spring Security, JWT, PostgreSQL, Flyway</dd></div>
-      <div><dt class="text-muted">Frontend</dt><dd class="mt-1">Angular, TypeScript, Tailwind CSS, RxJS, Vitest</dd></div>
-      <div><dt class="text-muted">Infraestructura</dt><dd class="mt-1">Render, Supabase, Vercel, Netlify, Docker, GitHub Actions</dd></div>
-      <div><dt class="text-muted">Herramientas</dt><dd class="mt-1">Git, Postman, Taiga, Mercado Pago API, Resend</dd></div>
+    <dl class="mt-4 grid gap-3 text-sm sm:grid-cols-[8rem_1fr]">
+      <dt class="text-muted">Backend</dt><dd>Java, Spring Boot, Spring Security, JWT, PostgreSQL, Flyway</dd>
+      <dt class="text-muted">Frontend</dt><dd>Angular, TypeScript, Tailwind CSS, RxJS, Vitest</dd>
+      <dt class="text-muted">Infraestructura</dt><dd>Render, Supabase, Vercel, Netlify, Docker, GitHub Actions</dd>
+      <dt class="text-muted">Herramientas</dt><dd>Git, Postman, Taiga, Mercado Pago API, Resend</dd>
     </dl>
   </section>
 
-  <!-- Formación -->
-  <section class="border-t border-line py-16">
-    <h2 class="section-label">Formación</h2>
-    <div class="mt-8 flex flex-wrap justify-between gap-2 text-sm">
-      <p>Tecnicatura Universitaria en Programación · UTN FRC</p>
-      <p class="text-muted">En curso · Inglés avanzado</p>
+  <!-- Proyectos -->
+  <section class="mt-16">
+    <h2 class="section-label">Proyectos</h2>
+    <div class="mt-4 grid gap-8 sm:grid-cols-3">
+      <article>
+        <img src="/src/assets/chirolas/pos-real-use.webp" alt="Chirolas App" class="aspect-[16/10] w-full rounded-md border border-line object-cover" loading="lazy">
+        <h3 class="mt-3 font-medium">Chirolas App</h3>
+        <p class="mt-1 text-sm text-muted">Punto de venta SaaS para kioscos y minimarkets. En producción.</p>
+        <p class="mt-2 text-xs text-faint">Angular · Spring Boot · PostgreSQL · Mercado Pago</p>
+        <a href="https://www.chirolaspv.com.ar/" target="_blank" rel="noopener" class="link mt-2 inline-block text-sm">Sitio ↗</a>
+      </article>
+      <article>
+        <img src="/src/assets/hospital-turn-manager.jpg" alt="Hospital Turn Manager" class="aspect-[16/10] w-full rounded-md border border-line object-cover" loading="lazy">
+        <h3 class="mt-3 font-medium">Hospital Turn Manager</h3>
+        <p class="mt-1 text-sm text-muted">Gestor de turnos médicos.</p>
+        <p class="mt-2 text-xs text-faint">Spring Boot · PostgreSQL · Angular</p>
+        <a href="https://github.com/FacuGuz/hospital-turn-manager" target="_blank" rel="noopener" class="link mt-2 inline-block text-sm">Código ↗</a>
+      </article>
+      <article>
+        <img src="/src/assets/proyectoflowdeck.png" alt="FlowDeck" class="aspect-[16/10] w-full rounded-md border border-line object-cover object-top" loading="lazy">
+        <h3 class="mt-3 font-medium">FlowDeck</h3>
+        <p class="mt-1 text-sm text-muted">Tablero Kanban colaborativo.</p>
+        <p class="mt-2 text-xs text-faint">Spring Boot · Angular</p>
+        <a href="https://github.com/FacuGuz/FlowDeck-" target="_blank" rel="noopener" class="link mt-2 inline-block text-sm">Código ↗</a>
+      </article>
     </div>
-  </section>
-
-  <!-- Contacto -->
-  <section id="contacto" class="border-t border-line py-16">
-    <h2 class="section-label">Contacto</h2>
-    <div class="mt-8 grid gap-10 lg:grid-cols-[1fr_1.4fr]">
-      <div class="space-y-2 text-sm">
-        <p class="text-muted">Disponible para trabajo y proyectos freelance.</p>
-        <p><a href="mailto:guzmanfacu02@hotmail.com" class="link">guzmanfacu02@hotmail.com</a></p>
-      </div>
-      <form id="form" class="grid gap-4 sm:grid-cols-2">
-        <input type="hidden" name="access_key" value="aba29d6c-2600-42f3-a629-c1b961c72df5">
-        <input type="checkbox" name="botcheck" class="hidden" tabindex="-1" autocomplete="off">
-        <input type="text" name="name" required autocomplete="name" placeholder="Nombre" aria-label="Nombre" class="field">
-        <input type="email" name="email" required autocomplete="email" placeholder="Email" aria-label="Email" class="field">
-        <textarea name="message" rows="4" required placeholder="Mensaje" aria-label="Mensaje" class="field resize-y sm:col-span-2"></textarea>
-        <div class="flex flex-wrap items-center gap-4 sm:col-span-2">
-          <button type="submit" class="btn-primary">Enviar</button>
-          <p id="result" class="text-sm" role="status" aria-live="polite"></p>
-        </div>
-      </form>
-    </div>
+    <ul class="mt-10 divide-y divide-line border-y border-line text-sm">
+      <li><a href="https://seiba-restobar.vercel.app" target="_blank" rel="noopener" class="flex justify-between py-2.5 hover:text-muted"><span>SEIBA Restobar</span><span class="text-faint">Sitio web ↗</span></a></li>
+      <li><a href="https://adal-seguridad.vercel.app" target="_blank" rel="noopener" class="flex justify-between py-2.5 hover:text-muted"><span>Adal Seguridad</span><span class="text-faint">Sitio web ↗</span></a></li>
+      <li><a href="https://campestre-polleria.vercel.app" target="_blank" rel="noopener" class="flex justify-between py-2.5 hover:text-muted"><span>Campestre Pollería</span><span class="text-faint">Sitio web ↗</span></a></li>
+    </ul>
   </section>
 </main>
 
-<footer class="border-t border-line py-8">
-  <div class="container-page text-sm text-faint">© <span id="year">2026</span> Facundo Guzmán</div>
-</footer>
-
-<script type="module" src="/src/scripts/app.js"></script>
 </body>
 </html>
