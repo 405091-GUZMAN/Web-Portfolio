@@ -23,50 +23,57 @@
 </head>
 <body>
 
-<main class="container-page py-16 sm:py-24">
+<main>
 
   <!-- Intro -->
-  <section class="flex items-start gap-4">
-    <img src="/src/assets/fotoperfil.jpeg" alt="Facundo Guzmán" class="h-12 w-12 rounded-full object-cover" width="48" height="48">
-    <div>
-      <h1 class="text-xl font-medium">Facundo Guzmán</h1>
-      <p class="text-muted">Desarrollador Full Stack</p>
-      <p class="mt-4 max-w-xl text-sm leading-relaxed text-muted">Con foco en Java, Spring Boot y Angular. Trabajo en todo el ciclo de una aplicación: modelado de base de datos, APIs REST, seguridad, interfaz y deploy. Estudiante de la Tecnicatura Universitaria en Programación (UTN FRC), con inglés avanzado. Disponible para trabajar.</p>
-      <div class="mt-4 flex flex-wrap gap-x-5 gap-y-1 text-sm">
-        <a href="mailto:guzmanfacu02@hotmail.com" class="link">Email</a>
-        <a href="https://www.linkedin.com/in/facundo-guzman-b81a612a0" target="_blank" rel="noopener" class="link">LinkedIn</a>
-        <a href="https://github.com/FacuGuz" target="_blank" rel="noopener" class="link">GitHub</a>
+  <section class="border-b border-line">
+    <div class="container-page grid gap-8 py-14 sm:py-20 lg:grid-cols-[1fr_1.6fr] lg:gap-16">
+      <div class="flex items-start gap-4">
+        <img src="/src/assets/fotoperfil.jpeg" alt="Facundo Guzmán" class="h-14 w-14 rounded-full object-cover" width="56" height="56">
+        <div>
+          <h1 class="text-2xl font-medium tracking-tight">Facundo Guzmán</h1>
+          <p class="text-muted">Desarrollador Full Stack</p>
+          <div class="mt-4 flex flex-wrap gap-x-5 gap-y-1 text-sm">
+            <a href="mailto:guzmanfacu02@hotmail.com" class="link">Email</a>
+            <a href="https://www.linkedin.com/in/facundo-guzman-b81a612a0" target="_blank" rel="noopener" class="link">LinkedIn</a>
+            <a href="https://github.com/FacuGuz" target="_blank" rel="noopener" class="link">GitHub</a>
+          </div>
+        </div>
       </div>
+      <p class="text-base leading-relaxed text-muted sm:text-lg">Con foco en Java, Spring Boot y Angular. Trabajo en todo el ciclo de una aplicación: modelado de base de datos, APIs REST, seguridad, interfaz y deploy. Estudiante de la Tecnicatura Universitaria en Programación (UTN FRC), con inglés avanzado. Disponible para trabajar.</p>
     </div>
   </section>
 
   <!-- Stack -->
-  <section class="mt-16">
-    <h2 class="section-label">Stack</h2>
-    <div class="mt-4 grid gap-4 sm:grid-cols-2">
-      <div class="rounded-lg border border-line bg-white p-5">
-        <h3 class="text-sm font-medium">Backend</h3>
+  <section class="border-b border-line bg-white">
+    <div class="container-page py-14">
+    <h2 class="section-title">Stack</h2>
+    <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div class="rounded-lg border border-line bg-bg p-5">
+        <h3 class="text-xs font-medium uppercase tracking-wider text-muted">Backend</h3>
         <div class="mt-3 flex flex-wrap gap-2"><span class="chip"><i class="devicon-java-plain colored"></i>Java</span><span class="chip"><i class="devicon-spring-plain colored"></i>Spring Boot</span><span class="chip"><i class="devicon-spring-plain colored"></i>Spring Security</span><span class="chip">JWT</span><span class="chip"><i class="devicon-postgresql-plain colored"></i>PostgreSQL</span><span class="chip">Flyway</span></div>
       </div>
-      <div class="rounded-lg border border-line bg-white p-5">
-        <h3 class="text-sm font-medium">Frontend</h3>
+      <div class="rounded-lg border border-line bg-bg p-5">
+        <h3 class="text-xs font-medium uppercase tracking-wider text-muted">Frontend</h3>
         <div class="mt-3 flex flex-wrap gap-2"><span class="chip"><i class="devicon-angular-plain text-[#dd0031]"></i>Angular</span><span class="chip"><i class="devicon-typescript-plain colored"></i>TypeScript</span><span class="chip"><i class="devicon-tailwindcss-original colored"></i>Tailwind CSS</span><span class="chip"><i class="devicon-rxjs-plain colored"></i>RxJS</span><span class="chip"><i class="devicon-vitest-plain colored"></i>Vitest</span></div>
       </div>
-      <div class="rounded-lg border border-line bg-white p-5">
-        <h3 class="text-sm font-medium">Infraestructura</h3>
+      <div class="rounded-lg border border-line bg-bg p-5">
+        <h3 class="text-xs font-medium uppercase tracking-wider text-muted">Infraestructura</h3>
         <div class="mt-3 flex flex-wrap gap-2"><span class="chip">Render</span><span class="chip"><i class="devicon-supabase-plain colored"></i>Supabase</span><span class="chip"><i class="devicon-vercel-original"></i>Vercel</span><span class="chip"><i class="devicon-netlify-plain colored"></i>Netlify</span><span class="chip"><i class="devicon-docker-plain colored"></i>Docker</span><span class="chip"><i class="devicon-githubactions-plain colored"></i>GitHub Actions</span></div>
       </div>
-      <div class="rounded-lg border border-line bg-white p-5">
-        <h3 class="text-sm font-medium">Herramientas</h3>
+      <div class="rounded-lg border border-line bg-bg p-5">
+        <h3 class="text-xs font-medium uppercase tracking-wider text-muted">Herramientas</h3>
         <div class="mt-3 flex flex-wrap gap-2"><span class="chip"><i class="devicon-git-plain colored"></i>Git</span><span class="chip"><i class="devicon-postman-plain colored"></i>Postman</span><span class="chip">Taiga</span><span class="chip">Mercado Pago API</span><span class="chip">Resend</span></div>
       </div>
+    </div>
     </div>
   </section>
 
   <!-- Proyectos -->
-  <section class="mt-16">
-    <h2 class="section-label">Proyectos</h2>
-    <div class="mt-4 grid gap-8 sm:grid-cols-3">
+  <section class="border-b border-line">
+    <div class="container-page py-14">
+    <h2 class="section-title">Proyectos</h2>
+    <div class="mt-6 grid gap-8 sm:grid-cols-3">
       <article>
         <img src="/src/assets/chirolas/pos-real-use.webp" alt="Chirolas App" class="aspect-[16/10] w-full rounded-md border border-line object-cover" loading="lazy">
         <h3 class="mt-3 font-medium">Chirolas App</h3>
@@ -88,6 +95,7 @@
         <p class="mt-2 text-xs text-faint">Spring Boot · PostgreSQL · Angular</p>
         <a href="https://github.com/FacuGuz/hospital-turn-manager" target="_blank" rel="noopener" class="link mt-2 inline-block text-sm">Código ↗</a>
       </article>
+    </div>
     </div>
   </section>
 </main>
