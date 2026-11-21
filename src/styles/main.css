@@ -11,9 +11,9 @@
   --color-ink: #e8edf3;
   --color-muted: #94a0b0;
   --color-faint: #64707f;
-  --color-accent: #5eead4;
-  --color-accent-strong: #2dd4bf;
-  --color-accent-ink: #042f2a;
+  --color-accent: #e8edf3;
+  --color-accent-strong: #ffffff;
+  --color-accent-ink: #0a0c0f;
 }
 
 @layer base {
@@ -34,16 +34,16 @@
     @apply mx-auto w-full max-w-6xl px-4 sm:px-6;
   }
   .eyebrow {
-    @apply font-mono text-xs uppercase tracking-[0.18em] text-accent;
+    @apply text-sm font-medium text-muted;
   }
   .section-title {
     @apply mt-2 text-3xl font-semibold tracking-tight sm:text-4xl;
   }
   .card {
-    @apply rounded-2xl border border-line bg-surface;
+    @apply rounded-xl border border-line bg-surface;
   }
   .chip {
-    @apply inline-flex items-center gap-2 rounded-full border border-line bg-surface-2 px-3 py-1.5 text-sm text-ink;
+    @apply inline-flex items-center rounded-md border border-line px-2.5 py-1 text-sm text-muted;
   }
   .chip i {
     @apply text-base;
@@ -55,10 +55,10 @@
     @apply inline-flex items-center gap-2 rounded-lg px-4 py-2.5 text-sm font-medium transition bg-accent text-accent-ink hover:bg-accent-strong;
   }
   .btn-ghost {
-    @apply inline-flex items-center gap-2 rounded-lg px-4 py-2.5 text-sm font-medium transition border border-line text-ink hover:border-accent/60 hover:text-accent;
+    @apply inline-flex items-center gap-2 rounded-lg px-4 py-2.5 text-sm font-medium transition border border-line text-ink hover:border-faint;
   }
   .link-arrow {
-    @apply inline-flex items-center gap-1.5 text-sm font-medium text-accent hover:underline underline-offset-4;
+    @apply inline-flex items-center gap-1.5 text-sm font-medium text-ink hover:underline underline-offset-4;
   }
   .field {
     @apply w-full rounded-lg border border-line bg-surface-2 px-3.5 py-2.5 text-ink placeholder:text-faint outline-none transition focus:border-accent;

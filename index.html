@@ -28,7 +28,7 @@
 <header class="fixed inset-x-0 top-0 z-50 border-b border-line/70 bg-bg/80 backdrop-blur-md">
   <div class="container-page flex h-16 items-center justify-between">
     <a href="#inicio" class="flex items-center gap-2.5 font-semibold tracking-tight">
-      <span class="grid h-8 w-8 place-items-center rounded-lg bg-accent font-mono text-sm text-accent-ink">FG</span>
+      <span class="grid h-8 w-8 place-items-center rounded-lg border border-line font-mono text-xs text-ink">FG</span>
       <span class="hidden sm:inline">Facundo Guzmán</span>
     </a>
     <nav class="hidden items-center gap-7 text-sm text-muted md:flex" aria-label="Principal">
@@ -60,19 +60,18 @@
 
   <!-- Hero -->
   <section class="relative overflow-hidden pt-28 pb-16 sm:pt-36 sm:pb-24">
-    <div class="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(60%_50%_at_70%_0%,rgba(94,234,212,0.10),transparent_70%)]"></div>
     <div class="container-page grid items-center gap-12 lg:grid-cols-[1.4fr_1fr]">
       <div>
-        <span class="inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/10 px-3 py-1 text-xs font-medium text-accent">
-          <span class="h-1.5 w-1.5 animate-pulse rounded-full bg-accent"></span>
+        <span class="inline-flex items-center gap-2 text-sm text-muted">
+          <span class="h-2 w-2 rounded-full bg-emerald-500"></span>
           Disponible para trabajar · Open to work
         </span>
-        <h1 class="mt-6 text-4xl font-semibold leading-[1.08] tracking-tight sm:text-6xl">
-          Construyo productos web completos, <span class="text-accent">del backend al mostrador.</span>
+        <h1 class="mt-5 text-4xl font-semibold leading-[1.1] tracking-tight sm:text-5xl">
+          Construyo productos web completos, del backend al mostrador.
         </h1>
         <p class="mt-6 max-w-xl text-lg leading-relaxed text-muted">
           Soy Facundo, desarrollador Full Stack con <span class="text-ink">Java, Spring Boot y Angular</span>. Diseñé, construí y mantengo
-          <a href="#chirolas" class="text-ink underline decoration-accent/50 underline-offset-4 hover:decoration-accent">Chirolas</a>,
+          <a href="#chirolas" class="text-ink underline decoration-faint underline-offset-4 hover:decoration-ink">Chirolas</a>,
           un sistema de punto de venta en producción para kioscos y minimarkets.
         </p>
         <div class="mt-8 flex flex-wrap gap-3">
@@ -85,15 +84,14 @@
           <div><dt class="text-faint">Idiomas</dt><dd class="mt-1 font-medium">Inglés avanzado</dd></div>
         </dl>
       </div>
-      <div class="relative mx-auto w-full max-w-[240px] sm:max-w-xs lg:max-w-sm">
-        <div class="absolute -inset-3 -z-10 rounded-[2rem] bg-gradient-to-br from-accent/25 via-transparent to-transparent blur-2xl"></div>
-        <img src="/src/assets/fotoperfil.jpeg" alt="Facundo Guzmán" class="aspect-[4/5] w-full rounded-3xl border border-line object-cover" width="972" height="1296">
+      <div class="relative mx-auto w-full max-w-[240px] sm:max-w-xs lg:max-w-[300px]">
+        <img src="/src/assets/fotoperfil.jpeg" alt="Facundo Guzmán" class="aspect-[4/5] w-full rounded-xl border border-line object-cover" width="972" height="1296">
       </div>
     </div>
   </section>
 
   <!-- Chirolas case study -->
-  <section id="chirolas" class="border-t border-line bg-surface/40 py-20 sm:py-28">
+  <section id="chirolas" class="border-t border-line py-20 sm:py-28">
     <div class="container-page">
       <div class="reveal flex flex-wrap items-end justify-between gap-6">
         <div class="max-w-2xl">
@@ -113,29 +111,29 @@
 
       <div class="reveal mt-10 grid gap-6 md:grid-cols-3">
         <div class="card p-6">
-          <p class="eyebrow text-faint">El problema</p>
+          <p class="text-sm font-medium text-ink">El problema</p>
           <p class="mt-3 leading-relaxed text-muted">Los kioscos y minimarkets suelen vender con cuaderno o con sistemas caros y complejos. Pierden control de caja, de stock y no saben qué productos les dejan plata.</p>
         </div>
         <div class="card p-6">
-          <p class="eyebrow text-faint">La solución</p>
+          <p class="text-sm font-medium text-ink">La solución</p>
           <p class="mt-3 leading-relaxed text-muted">Un POS rápido para el mostrador, con cobro por QR y Point de Mercado Pago, apertura y cierre de caja con arqueo, control de stock, historial y estadísticas de ventas.</p>
         </div>
         <div class="card p-6">
-          <p class="eyebrow text-faint">El modelo</p>
+          <p class="text-sm font-medium text-ink">El modelo</p>
           <p class="mt-3 leading-relaxed text-muted">SaaS por suscripción con planes pagos, multi-local y multi-usuario con roles, y una landing propia para captar comercios.</p>
         </div>
       </div>
 
       <div class="reveal mt-6 grid gap-6 lg:grid-cols-[1.1fr_1fr]">
         <div class="card p-6 sm:p-8">
-          <p class="eyebrow text-faint">Decisiones técnicas</p>
-          <ul class="mt-5 space-y-4 text-muted">
-            <li class="flex gap-3"><i class="fa-solid fa-shield-halved mt-1 text-accent"></i><span><span class="text-ink">Multi-tenant seguro:</span> Spring Security + JWT con aislamiento de datos por comercio, cubierto con tests.</span></li>
-            <li class="flex gap-3"><i class="fa-solid fa-qrcode mt-1 text-accent"></i><span><span class="text-ink">Cobros integrados:</span> QR y Point de Mercado Pago con webhooks, y suscripciones recurrentes.</span></li>
-            <li class="flex gap-3"><i class="fa-solid fa-bolt mt-1 text-accent"></i><span><span class="text-ink">Tiempo real:</span> Server-Sent Events para reflejar pagos y ventas al instante en el mostrador.</span></li>
-            <li class="flex gap-3"><i class="fa-solid fa-wifi mt-1 text-accent"></i><span><span class="text-ink">Funciona offline:</span> PWA con service worker para seguir vendiendo aunque se corte internet.</span></li>
-            <li class="flex gap-3"><i class="fa-solid fa-database mt-1 text-accent"></i><span><span class="text-ink">Datos confiables:</span> PostgreSQL en Supabase con migraciones versionadas (Flyway) y backups automáticos con GitHub Actions.</span></li>
-            <li class="flex gap-3"><i class="fa-solid fa-gauge-high mt-1 text-accent"></i><span><span class="text-ink">Rendimiento y protección:</span> caché con Caffeine y rate limiting con Bucket4j.</span></li>
+          <p class="text-sm font-medium text-ink">Decisiones técnicas</p>
+          <ul class="mt-5 list-disc space-y-3 pl-5 text-muted marker:text-faint">
+            <li><span class="text-ink">Multi-tenant seguro:</span> Spring Security + JWT con aislamiento de datos por comercio, cubierto con tests.</li>
+            <li><span class="text-ink">Cobros integrados:</span> QR y Point de Mercado Pago con webhooks, y suscripciones recurrentes.</li>
+            <li><span class="text-ink">Tiempo real:</span> Server-Sent Events para reflejar pagos y ventas al instante en el mostrador.</li>
+            <li><span class="text-ink">Funciona offline:</span> PWA con service worker para seguir vendiendo aunque se corte internet.</li>
+            <li><span class="text-ink">Datos confiables:</span> PostgreSQL en Supabase con migraciones versionadas (Flyway) y backups automáticos con GitHub Actions.</li>
+            <li><span class="text-ink">Rendimiento y protección:</span> caché con Caffeine y rate limiting con Bucket4j.</li>
           </ul>
         </div>
         <div class="grid grid-cols-2 gap-4">
@@ -146,15 +144,15 @@
       </div>
 
       <div class="reveal mt-8 flex flex-wrap gap-2">
-        <span class="chip"><i class="devicon-angular-plain colored"></i>Angular 22</span>
-        <span class="chip"><i class="devicon-spring-plain colored"></i>Spring Boot 3</span>
-        <span class="chip"><i class="devicon-java-plain colored"></i>Java 17</span>
-        <span class="chip"><i class="devicon-postgresql-plain colored"></i>PostgreSQL</span>
-        <span class="chip"><i class="devicon-tailwindcss-original colored"></i>Tailwind</span>
-        <span class="chip"><i class="fa-solid fa-credit-card text-accent"></i>Mercado Pago</span>
-        <span class="chip"><i class="fa-solid fa-server text-accent"></i>Render</span>
-        <span class="chip"><i class="devicon-supabase-plain colored"></i>Supabase</span>
-        <span class="chip"><i class="devicon-vercel-original"></i>Vercel</span>
+        <span class="chip">Angular 22</span>
+        <span class="chip">Spring Boot 3</span>
+        <span class="chip">Java 17</span>
+        <span class="chip">PostgreSQL</span>
+        <span class="chip">Tailwind</span>
+        <span class="chip">Mercado Pago</span>
+        <span class="chip">Render</span>
+        <span class="chip">Supabase</span>
+        <span class="chip">Vercel</span>
       </div>
     </div>
   </section>
@@ -169,7 +167,7 @@
       <div class="mt-10 grid gap-6 md:grid-cols-2">
         <article class="reveal card group overflow-hidden">
           <a href="https://github.com/FacuGuz/hospital-turn-manager" target="_blank" rel="noopener" class="block aspect-[16/9] overflow-hidden border-b border-line">
-            <img src="/src/assets/hospital-turn-manager.jpg" alt="Hospital Turn Manager" class="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]" loading="lazy">
+            <img src="/src/assets/hospital-turn-manager.jpg" alt="Hospital Turn Manager" class="h-full w-full object-cover" loading="lazy">
           </a>
           <div class="p-6">
             <h3 class="text-xl font-semibold">Hospital Turn Manager</h3>
@@ -183,7 +181,7 @@
         </article>
         <article class="reveal card group overflow-hidden">
           <a href="https://github.com/FacuGuz/FlowDeck-" target="_blank" rel="noopener" class="block aspect-[16/9] overflow-hidden border-b border-line">
-            <img src="/src/assets/proyectoflowdeck.png" alt="FlowDeck" class="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]" loading="lazy">
+            <img src="/src/assets/proyectoflowdeck.png" alt="FlowDeck" class="h-full w-full object-cover" loading="lazy">
           </a>
           <div class="p-6">
             <h3 class="text-xl font-semibold">FlowDeck</h3>
@@ -201,16 +199,16 @@
         <p class="eyebrow">Freelance</p>
         <h3 class="mt-2 text-2xl font-semibold tracking-tight">Sitios para clientes</h3>
         <div class="mt-6 grid gap-4 sm:grid-cols-3">
-          <a href="https://seiba-restobar.vercel.app" target="_blank" rel="noopener" class="card group p-5 transition hover:border-accent/50">
-            <div class="flex items-center justify-between"><span class="font-medium">SEIBA Restobar</span><i class="fa-solid fa-arrow-up-right text-sm text-faint group-hover:text-accent"></i></div>
+          <a href="https://seiba-restobar.vercel.app" target="_blank" rel="noopener" class="card group p-5 transition hover:border-faint">
+            <div class="flex items-center justify-between"><span class="font-medium">SEIBA Restobar</span><i class="fa-solid fa-arrow-up-right text-sm text-faint group-hover:text-ink"></i></div>
             <p class="mt-2 text-sm text-muted">Sitio para un restobar: carta, ambiente y reservas.</p>
           </a>
-          <a href="https://adal-seguridad.vercel.app" target="_blank" rel="noopener" class="card group p-5 transition hover:border-accent/50">
-            <div class="flex items-center justify-between"><span class="font-medium">Adal Seguridad</span><i class="fa-solid fa-arrow-up-right text-sm text-faint group-hover:text-accent"></i></div>
+          <a href="https://adal-seguridad.vercel.app" target="_blank" rel="noopener" class="card group p-5 transition hover:border-faint">
+            <div class="flex items-center justify-between"><span class="font-medium">Adal Seguridad</span><i class="fa-solid fa-arrow-up-right text-sm text-faint group-hover:text-ink"></i></div>
             <p class="mt-2 text-sm text-muted">Sitio institucional para una empresa de seguridad.</p>
           </a>
-          <a href="https://campestre-polleria.vercel.app" target="_blank" rel="noopener" class="card group p-5 transition hover:border-accent/50">
-            <div class="flex items-center justify-between"><span class="font-medium">Campestre Pollería</span><i class="fa-solid fa-arrow-up-right text-sm text-faint group-hover:text-accent"></i></div>
+          <a href="https://campestre-polleria.vercel.app" target="_blank" rel="noopener" class="card group p-5 transition hover:border-faint">
+            <div class="flex items-center justify-between"><span class="font-medium">Campestre Pollería</span><i class="fa-solid fa-arrow-up-right text-sm text-faint group-hover:text-ink"></i></div>
             <p class="mt-2 text-sm text-muted">Sitio para una pollería, con productos y contacto.</p>
           </a>
         </div>
@@ -219,7 +217,7 @@
   </section>
 
   <!-- Stack -->
-  <section id="stack" class="border-t border-line bg-surface/40 py-20 sm:py-28">
+  <section id="stack" class="border-t border-line py-20 sm:py-28">
     <div class="container-page">
       <div class="reveal max-w-2xl">
         <p class="eyebrow">Stack</p>
@@ -229,42 +227,42 @@
         <div>
           <h3 class="text-sm font-medium text-muted">Backend</h3>
           <div class="mt-3 flex flex-wrap gap-2">
-            <span class="chip"><i class="devicon-java-plain colored"></i>Java</span>
-            <span class="chip"><i class="devicon-spring-plain colored"></i>Spring Boot</span>
-            <span class="chip"><i class="fa-solid fa-shield-halved text-accent"></i>Spring Security · JWT</span>
-            <span class="chip"><i class="devicon-postgresql-plain colored"></i>PostgreSQL / SQL</span>
-            <span class="chip"><i class="fa-solid fa-layer-group text-accent"></i>Flyway</span>
-            <span class="chip"><i class="fa-solid fa-credit-card text-accent"></i>Mercado Pago API</span>
+            <span class="chip">Java</span>
+            <span class="chip">Spring Boot</span>
+            <span class="chip">Spring Security · JWT</span>
+            <span class="chip">PostgreSQL / SQL</span>
+            <span class="chip">Flyway</span>
+            <span class="chip">Mercado Pago API</span>
           </div>
         </div>
         <div>
           <h3 class="text-sm font-medium text-muted">Frontend</h3>
           <div class="mt-3 flex flex-wrap gap-2">
-            <span class="chip"><i class="devicon-angular-plain colored"></i>Angular</span>
-            <span class="chip"><i class="devicon-typescript-plain colored"></i>TypeScript</span>
-            <span class="chip"><i class="devicon-tailwindcss-original colored"></i>Tailwind CSS</span>
-            <span class="chip"><i class="devicon-rxjs-plain colored"></i>RxJS</span>
-            <span class="chip"><i class="devicon-vitest-plain colored"></i>Vitest</span>
+            <span class="chip">Angular</span>
+            <span class="chip">TypeScript</span>
+            <span class="chip">Tailwind CSS</span>
+            <span class="chip">RxJS</span>
+            <span class="chip">Vitest</span>
           </div>
         </div>
         <div>
           <h3 class="text-sm font-medium text-muted">Deploy e infraestructura</h3>
           <div class="mt-3 flex flex-wrap gap-2">
-            <span class="chip"><i class="fa-solid fa-server text-accent"></i>Render</span>
-            <span class="chip"><i class="devicon-supabase-plain colored"></i>Supabase</span>
-            <span class="chip"><i class="devicon-vercel-original"></i>Vercel</span>
-            <span class="chip"><i class="devicon-netlify-plain colored"></i>Netlify</span>
-            <span class="chip"><i class="devicon-githubactions-plain colored"></i>GitHub Actions</span>
-            <span class="chip"><i class="devicon-docker-plain colored"></i>Docker</span>
-            <span class="chip"><i class="fa-solid fa-envelope-open-text text-accent"></i>Resend</span>
+            <span class="chip">Render</span>
+            <span class="chip">Supabase</span>
+            <span class="chip">Vercel</span>
+            <span class="chip">Netlify</span>
+            <span class="chip">GitHub Actions</span>
+            <span class="chip">Docker</span>
+            <span class="chip">Resend</span>
           </div>
         </div>
         <div>
           <h3 class="text-sm font-medium text-muted">Herramientas</h3>
           <div class="mt-3 flex flex-wrap gap-2">
-            <span class="chip"><i class="devicon-git-plain colored"></i>Git · GitHub</span>
-            <span class="chip"><i class="devicon-postman-plain colored"></i>Postman</span>
-            <span class="chip"><i class="fa-solid fa-list-check text-accent"></i>Taiga · Scrum</span>
+            <span class="chip">Git · GitHub</span>
+            <span class="chip">Postman</span>
+            <span class="chip">Taiga · Scrum</span>
           </div>
         </div>
       </div>
@@ -282,7 +280,7 @@
       </div>
       <ol class="reveal relative space-y-8 border-l border-line pl-8">
         <li class="relative">
-          <span class="absolute -left-[37px] top-1.5 h-2.5 w-2.5 rounded-full bg-accent ring-4 ring-bg"></span>
+          <span class="absolute -left-[37px] top-1.5 h-2.5 w-2.5 rounded-full bg-ink ring-4 ring-bg"></span>
           <p class="font-mono text-xs text-faint">Actualidad</p>
           <h3 class="mt-1 text-lg font-semibold">Fundador y desarrollador · Chirolas App</h3>
           <p class="mt-2 text-muted">Diseño, desarrollo y opero un POS SaaS para comercios: producto, backend, frontend, cobros, infraestructura y soporte.</p>
@@ -304,16 +302,16 @@
   </section>
 
   <!-- Contacto -->
-  <section id="contacto" class="border-t border-line bg-surface/40 py-20 sm:py-28">
+  <section id="contacto" class="border-t border-line py-20 sm:py-28">
     <div class="container-page grid gap-12 lg:grid-cols-[1fr_1.3fr]">
       <div class="reveal">
         <p class="eyebrow">Contacto</p>
         <h2 class="section-title">¿Trabajamos juntos?</h2>
         <p class="mt-5 leading-relaxed text-muted">Estoy buscando oportunidades como desarrollador y también tomo proyectos freelance. Escribime y te respondo a la brevedad.</p>
         <ul class="mt-8 space-y-3 text-sm">
-          <li><a href="mailto:guzmanfacu02@hotmail.com" class="inline-flex items-center gap-3 text-muted hover:text-accent"><i class="fa-solid fa-envelope w-4 text-accent"></i>guzmanfacu02@hotmail.com</a></li>
-          <li><a href="https://www.linkedin.com/in/facundo-guzman-b81a612a0" target="_blank" rel="noopener" class="inline-flex items-center gap-3 text-muted hover:text-accent"><i class="fab fa-linkedin w-4 text-accent"></i>LinkedIn</a></li>
-          <li><a href="https://github.com/FacuGuz" target="_blank" rel="noopener" class="inline-flex items-center gap-3 text-muted hover:text-accent"><i class="fab fa-github w-4 text-accent"></i>github.com/FacuGuz</a></li>
+          <li><a href="mailto:guzmanfacu02@hotmail.com" class="inline-flex items-center gap-3 text-muted hover:text-ink"><i class="fa-solid fa-envelope w-4"></i>guzmanfacu02@hotmail.com</a></li>
+          <li><a href="https://www.linkedin.com/in/facundo-guzman-b81a612a0" target="_blank" rel="noopener" class="inline-flex items-center gap-3 text-muted hover:text-ink"><i class="fab fa-linkedin w-4"></i>LinkedIn</a></li>
+          <li><a href="https://github.com/FacuGuz" target="_blank" rel="noopener" class="inline-flex items-center gap-3 text-muted hover:text-ink"><i class="fab fa-github w-4"></i>github.com/FacuGuz</a></li>
         </ul>
       </div>
       <form id="form" class="reveal card grid gap-4 p-6 sm:grid-cols-2 sm:p-8">
