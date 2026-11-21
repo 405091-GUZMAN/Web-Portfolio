@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Geist", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-bg: #0a0c0f;
+  --color-surface: #11151b;
+  --color-surface-2: #161b23;
+  --color-line: #222a35;
+  --color-ink: #e8edf3;
+  --color-muted: #94a0b0;
+  --color-faint: #64707f;
+  --color-accent: #5eead4;
+  --color-accent-strong: #2dd4bf;
+  --color-accent-ink: #042f2a;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+  body {
+    @apply bg-bg text-ink font-sans antialiased;
+  }
+  ::selection {
+    background: color-mix(in oklab, var(--color-accent) 35%, transparent);
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6;
+  }
+  .eyebrow {
+    @apply font-mono text-xs uppercase tracking-[0.18em] text-accent;
+  }
+  .section-title {
+    @apply mt-2 text-3xl font-semibold tracking-tight sm:text-4xl;
+  }
+  .card {
+    @apply rounded-2xl border border-line bg-surface;
+  }
+  .chip {
+    @apply inline-flex items-center gap-2 rounded-full border border-line bg-surface-2 px-3 py-1.5 text-sm text-ink;
+  }
+  .chip i {
+    @apply text-base;
+  }
+  .btn {
+    @apply inline-flex items-center gap-2 rounded-lg px-4 py-2.5 text-sm font-medium transition;
+  }
+  .btn-primary {
+    @apply inline-flex items-center gap-2 rounded-lg px-4 py-2.5 text-sm font-medium transition bg-accent text-accent-ink hover:bg-accent-strong;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 rounded-lg px-4 py-2.5 text-sm font-medium transition border border-line text-ink hover:border-accent/60 hover:text-accent;
+  }
+  .link-arrow {
+    @apply inline-flex items-center gap-1.5 text-sm font-medium text-accent hover:underline underline-offset-4;
+  }
+  .field {
+    @apply w-full rounded-lg border border-line bg-surface-2 px-3.5 py-2.5 text-ink placeholder:text-faint outline-none transition focus:border-accent;
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
+
+#mobile-menu {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+#mobile-menu.open {
+  opacity: 1;
+  pointer-events: auto;
+}

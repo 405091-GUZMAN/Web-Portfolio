@@ -1,63 +1,60 @@
+// Contact form (Web3Forms)
 const form = document.getElementById('form');
 const result = document.getElementById('result');
 
+const setResult = (text, tone) => {
+  if (!result) return;
+  result.textContent = text;
+  result.className = `text-sm ${tone === 'ok' ? 'text-accent' : tone === 'error' ? 'text-red-400' : 'text-muted'}`;
+};
+
 if (form && result) {
-  form.addEventListener('submit', function (e) {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
+    const submit = form.querySelector('button[type="submit"]');
+    submit?.setAttribute('disabled', '');
+    setResult('Enviando…');
 
-    const formData = new FormData(form);
-    const json = JSON.stringify(Object.fromEntries(formData));
-
-    result.textContent = 'Enviando...';
-    result.className = 'text-sm text-center text-gray-300';
-
-    fetch('https://api.web3forms.com/submit', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Accept: 'application/json',
-      },
-      body: json,
-    })
-      .then(async (response) => {
-        const data = await response.json();
-        if (response.status === 200) {
-          result.textContent = 'Mensaje enviado con éxito';
-          result.className = 'text-sm text-center text-emerald-400 font-semibold';
-        } else {
-          result.textContent = `Error: ${data.message}`;
-          result.className = 'text-sm text-center text-red-500 font-semibold';
-        }
-      })
-      .catch(() => {
-        result.textContent = 'Ocurrió un error inesperado.';
-        result.className = 'text-sm text-center text-red-500 font-semibold';
-      })
-      .finally(() => {
-        form.reset();
-        setTimeout(() => {
-          result.textContent = '';
-        }, 12000);
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(Object.fromEntries(new FormData(form))),
       });
+      const data = await response.json();
+      if (response.ok) {
+        setResult('¡Gracias! Tu mensaje fue enviado.', 'ok');
+        form.reset();
+      } else {
+        setResult(`Error: ${data.message}`, 'error');
+      }
+    } catch {
+      setResult('Ocurrió un error inesperado. Probá de nuevo o escribime por email.', 'error');
+    } finally {
+      submit?.removeAttribute('disabled');
+      setTimeout(() => setResult(''), 12000);
+    }
   });
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-  const menuToggle = document.getElementById('menu-toggle');
-  const mobileMenu = document.getElementById('mobile-menu');
-  const closeMenu = document.getElementById('close-menu');
+// Mobile menu
+const menuToggle = document.getElementById('menu-toggle');
+const mobileMenu = document.getElementById('mobile-menu');
 
-  const toggleMenu = () => {
-    mobileMenu.classList.toggle('open');
-  };
+const setMenu = (open) => {
+  mobileMenu?.classList.toggle('open', open);
+  menuToggle?.setAttribute('aria-expanded', String(open));
+  menuToggle?.querySelector('i')?.classList.replace(open ? 'fa-bars' : 'fa-xmark', open ? 'fa-xmark' : 'fa-bars');
+  document.body.style.overflow = open ? 'hidden' : '';
+};
 
-  menuToggle?.addEventListener('click', toggleMenu);
-  closeMenu?.addEventListener('click', toggleMenu);
+menuToggle?.addEventListener('click', () => setMenu(!mobileMenu?.classList.contains('open')));
+mobileMenu?.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => setMenu(false)));
+document.addEventListener('keydown', (e) => e.key === 'Escape' && setMenu(false));
 
-  const mobileLinks = mobileMenu?.querySelectorAll('a') || [];
-  mobileLinks.forEach((link) => link.addEventListener('click', toggleMenu));
-
-  const animatedBlocks = document.querySelectorAll('.fade-up');
+// Reveal on scroll
+const blocks = document.querySelectorAll('.reveal');
+if ('IntersectionObserver' in window) {
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -67,8 +64,13 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       });
     },
-    { threshold: 0.2 }
+    { threshold: 0.12 }
   );
+  blocks.forEach((block) => observer.observe(block));
+} else {
+  blocks.forEach((block) => block.classList.add('visible'));
+}
 
-  animatedBlocks.forEach((block) => observer.observe(block));
-});
+// Footer year
+const year = document.getElementById('year');
+if (year) year.textContent = String(new Date().getFullYear());
