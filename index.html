@@ -18,6 +18,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
   <link rel="stylesheet" href="/src/styles/main.css">
 </head>
 <body>
@@ -30,7 +31,7 @@
     <div>
       <h1 class="text-xl font-medium">Facundo Guzmán</h1>
       <p class="text-muted">Desarrollador Full Stack</p>
-      <p class="mt-4 max-w-xl text-sm text-muted">Estudiante de la Tecnicatura Universitaria en Programación (UTN FRC). Inglés avanzado. Disponible para trabajar.</p>
+      <p class="mt-4 max-w-xl text-sm leading-relaxed text-muted">Con foco en Java, Spring Boot y Angular. Trabajo en todo el ciclo de una aplicación: modelado de base de datos, APIs REST, seguridad, interfaz y deploy. Estudiante de la Tecnicatura Universitaria en Programación (UTN FRC), con inglés avanzado. Disponible para trabajar.</p>
       <div class="mt-4 flex flex-wrap gap-x-5 gap-y-1 text-sm">
         <a href="mailto:guzmanfacu02@hotmail.com" class="link">Email</a>
         <a href="https://www.linkedin.com/in/facundo-guzman-b81a612a0" target="_blank" rel="noopener" class="link">LinkedIn</a>
@@ -42,12 +43,24 @@
   <!-- Stack -->
   <section class="mt-16">
     <h2 class="section-label">Stack</h2>
-    <dl class="mt-4 grid gap-3 text-sm sm:grid-cols-[8rem_1fr]">
-      <dt class="text-muted">Backend</dt><dd>Java, Spring Boot, Spring Security, JWT, PostgreSQL, Flyway</dd>
-      <dt class="text-muted">Frontend</dt><dd>Angular, TypeScript, Tailwind CSS, RxJS, Vitest</dd>
-      <dt class="text-muted">Infraestructura</dt><dd>Render, Supabase, Vercel, Netlify, Docker, GitHub Actions</dd>
-      <dt class="text-muted">Herramientas</dt><dd>Git, Postman, Taiga, Mercado Pago API, Resend</dd>
-    </dl>
+    <div class="mt-4 grid gap-4 sm:grid-cols-2">
+      <div class="rounded-lg border border-line bg-white p-5">
+        <h3 class="text-sm font-medium">Backend</h3>
+        <div class="mt-3 flex flex-wrap gap-2"><span class="chip"><i class="devicon-java-plain colored"></i>Java</span><span class="chip"><i class="devicon-spring-plain colored"></i>Spring Boot</span><span class="chip"><i class="devicon-spring-plain colored"></i>Spring Security</span><span class="chip">JWT</span><span class="chip"><i class="devicon-postgresql-plain colored"></i>PostgreSQL</span><span class="chip">Flyway</span></div>
+      </div>
+      <div class="rounded-lg border border-line bg-white p-5">
+        <h3 class="text-sm font-medium">Frontend</h3>
+        <div class="mt-3 flex flex-wrap gap-2"><span class="chip"><i class="devicon-angular-plain text-[#dd0031]"></i>Angular</span><span class="chip"><i class="devicon-typescript-plain colored"></i>TypeScript</span><span class="chip"><i class="devicon-tailwindcss-original colored"></i>Tailwind CSS</span><span class="chip"><i class="devicon-rxjs-plain colored"></i>RxJS</span><span class="chip"><i class="devicon-vitest-plain colored"></i>Vitest</span></div>
+      </div>
+      <div class="rounded-lg border border-line bg-white p-5">
+        <h3 class="text-sm font-medium">Infraestructura</h3>
+        <div class="mt-3 flex flex-wrap gap-2"><span class="chip">Render</span><span class="chip"><i class="devicon-supabase-plain colored"></i>Supabase</span><span class="chip"><i class="devicon-vercel-original"></i>Vercel</span><span class="chip"><i class="devicon-netlify-plain colored"></i>Netlify</span><span class="chip"><i class="devicon-docker-plain colored"></i>Docker</span><span class="chip"><i class="devicon-githubactions-plain colored"></i>GitHub Actions</span></div>
+      </div>
+      <div class="rounded-lg border border-line bg-white p-5">
+        <h3 class="text-sm font-medium">Herramientas</h3>
+        <div class="mt-3 flex flex-wrap gap-2"><span class="chip"><i class="devicon-git-plain colored"></i>Git</span><span class="chip"><i class="devicon-postman-plain colored"></i>Postman</span><span class="chip">Taiga</span><span class="chip">Mercado Pago API</span><span class="chip">Resend</span></div>
+      </div>
+    </div>
   </section>
 
   <!-- Proyectos -->
@@ -62,25 +75,20 @@
         <a href="https://www.chirolaspv.com.ar/" target="_blank" rel="noopener" class="link mt-2 inline-block text-sm">Sitio ↗</a>
       </article>
       <article>
-        <img src="/src/assets/hospital-turn-manager.jpg" alt="Hospital Turn Manager" class="aspect-[16/10] w-full rounded-md border border-line object-cover" loading="lazy">
-        <h3 class="mt-3 font-medium">Hospital Turn Manager</h3>
-        <p class="mt-1 text-sm text-muted">Gestor de turnos médicos.</p>
-        <p class="mt-2 text-xs text-faint">Spring Boot · PostgreSQL · Angular</p>
-        <a href="https://github.com/FacuGuz/hospital-turn-manager" target="_blank" rel="noopener" class="link mt-2 inline-block text-sm">Código ↗</a>
-      </article>
-      <article>
         <img src="/src/assets/proyectoflowdeck.png" alt="FlowDeck" class="aspect-[16/10] w-full rounded-md border border-line object-cover object-top" loading="lazy">
         <h3 class="mt-3 font-medium">FlowDeck</h3>
         <p class="mt-1 text-sm text-muted">Tablero Kanban colaborativo.</p>
         <p class="mt-2 text-xs text-faint">Spring Boot · Angular</p>
         <a href="https://github.com/FacuGuz/FlowDeck-" target="_blank" rel="noopener" class="link mt-2 inline-block text-sm">Código ↗</a>
       </article>
+      <article>
+        <img src="/src/assets/hospital-turn-manager.jpg" alt="Hospital Turn Manager" class="aspect-[16/10] w-full rounded-md border border-line object-cover" loading="lazy">
+        <h3 class="mt-3 font-medium">Hospital Turn Manager</h3>
+        <p class="mt-1 text-sm text-muted">Gestor de turnos médicos.</p>
+        <p class="mt-2 text-xs text-faint">Spring Boot · PostgreSQL · Angular</p>
+        <a href="https://github.com/FacuGuz/hospital-turn-manager" target="_blank" rel="noopener" class="link mt-2 inline-block text-sm">Código ↗</a>
+      </article>
     </div>
-    <ul class="mt-10 divide-y divide-line border-y border-line text-sm">
-      <li><a href="https://seiba-restobar.vercel.app" target="_blank" rel="noopener" class="flex justify-between py-2.5 hover:text-muted"><span>SEIBA Restobar</span><span class="text-faint">Sitio web ↗</span></a></li>
-      <li><a href="https://adal-seguridad.vercel.app" target="_blank" rel="noopener" class="flex justify-between py-2.5 hover:text-muted"><span>Adal Seguridad</span><span class="text-faint">Sitio web ↗</span></a></li>
-      <li><a href="https://campestre-polleria.vercel.app" target="_blank" rel="noopener" class="flex justify-between py-2.5 hover:text-muted"><span>Campestre Pollería</span><span class="text-faint">Sitio web ↗</span></a></li>
-    </ul>
   </section>
 </main>
 
