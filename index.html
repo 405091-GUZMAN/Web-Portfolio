@@ -4,333 +4,148 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Facundo Guzmán · Desarrollador Full Stack</title>
-  <meta name="description" content="Desarrollador Full Stack con Java, Spring Boot y Angular. Creador de Chirolas App, un sistema de punto de venta en producción para kioscos y minimarkets.">
+  <meta name="description" content="Desarrollador Full Stack con Java, Spring Boot y Angular. Creador de Chirolas, un sistema de punto de venta en producción para kioscos y minimarkets.">
   <link rel="canonical" href="https://guzmanfacundo.netlify.app/">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://guzmanfacundo.netlify.app/">
   <meta property="og:title" content="Facundo Guzmán · Desarrollador Full Stack">
-  <meta property="og:description" content="Java, Spring Boot y Angular. Creador de Chirolas App, un punto de venta en producción para kioscos y minimarkets.">
+  <meta property="og:description" content="Java, Spring Boot y Angular. Creador de Chirolas, un punto de venta en producción para kioscos y minimarkets.">
   <meta property="og:image" content="https://guzmanfacundo.netlify.app/og.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="theme-color" content="#0a0c0f">
+  <meta name="theme-color" content="#fafaf9">
   <link rel="icon" type="image/svg+xml" href="/src/assets/favicon.svg">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css">
   <link rel="stylesheet" href="/src/styles/main.css">
 </head>
 <body>
 
-<!-- Header -->
-<header class="fixed inset-x-0 top-0 z-50 border-b border-line/70 bg-bg/80 backdrop-blur-md">
-  <div class="container-page flex h-16 items-center justify-between">
-    <a href="#inicio" class="flex items-center gap-2.5 font-semibold tracking-tight">
-      <span class="grid h-8 w-8 place-items-center rounded-lg border border-line font-mono text-xs text-ink">FG</span>
-      <span class="hidden sm:inline">Facundo Guzmán</span>
-    </a>
-    <nav class="hidden items-center gap-7 text-sm text-muted md:flex" aria-label="Principal">
-      <a href="#chirolas" class="hover:text-ink">Chirolas</a>
-      <a href="#proyectos" class="hover:text-ink">Proyectos</a>
-      <a href="#stack" class="hover:text-ink">Stack</a>
-      <a href="#trayectoria" class="hover:text-ink">Trayectoria</a>
+<header class="sticky top-0 z-50 border-b border-line bg-bg/90 backdrop-blur">
+  <div class="container-page flex h-14 items-center justify-between text-sm">
+    <a href="#inicio" class="font-medium">Facundo Guzmán</a>
+    <nav class="flex items-center gap-5 text-muted" aria-label="Principal">
+      <a href="#proyectos" class="hidden hover:text-ink sm:inline">Proyectos</a>
+      <a href="#stack" class="hidden hover:text-ink sm:inline">Stack</a>
+      <a href="#contacto" class="hover:text-ink">Contacto</a>
+      <a href="https://github.com/FacuGuz" target="_blank" rel="noopener" aria-label="GitHub" class="hover:text-ink"><i class="fab fa-github text-base"></i></a>
+      <a href="https://www.linkedin.com/in/facundo-guzman-b81a612a0" target="_blank" rel="noopener" aria-label="LinkedIn" class="hover:text-ink"><i class="fab fa-linkedin text-base"></i></a>
     </nav>
-    <div class="flex items-center gap-1.5">
-      <a href="https://github.com/FacuGuz" target="_blank" rel="noopener" aria-label="GitHub" class="grid h-9 w-9 place-items-center rounded-lg text-muted hover:bg-surface-2 hover:text-ink"><i class="fab fa-github text-lg"></i></a>
-      <a href="https://www.linkedin.com/in/facundo-guzman-b81a612a0" target="_blank" rel="noopener" aria-label="LinkedIn" class="grid h-9 w-9 place-items-center rounded-lg text-muted hover:bg-surface-2 hover:text-ink"><i class="fab fa-linkedin text-lg"></i></a>
-      <a href="#contacto" class="btn-primary ml-2 hidden sm:inline-flex !py-2">Contacto</a>
-      <button id="menu-toggle" class="grid h-9 w-9 place-items-center rounded-lg border border-line text-ink md:hidden" aria-label="Abrir menú" aria-controls="mobile-menu" aria-expanded="false">
-        <i class="fa-solid fa-bars"></i>
-      </button>
-    </div>
   </div>
 </header>
 
-<nav id="mobile-menu" class="fixed inset-0 z-40 flex flex-col items-center justify-center gap-6 bg-bg/95 text-2xl md:hidden" aria-label="Menú móvil">
-  <a href="#chirolas">Chirolas</a>
-  <a href="#proyectos">Proyectos</a>
-  <a href="#stack">Stack</a>
-  <a href="#trayectoria">Trayectoria</a>
-  <a href="#contacto" class="text-accent">Contacto</a>
-</nav>
+<main id="inicio" class="container-page">
 
-<main id="inicio">
-
-  <!-- Hero -->
-  <section class="relative overflow-hidden pt-28 pb-16 sm:pt-36 sm:pb-24">
-    <div class="container-page grid items-center gap-12 lg:grid-cols-[1.4fr_1fr]">
+  <!-- Intro -->
+  <section class="py-16 sm:py-24">
+    <div class="flex items-center gap-4">
+      <img src="/src/assets/fotoperfil.jpeg" alt="Facundo Guzmán" class="h-14 w-14 rounded-full object-cover" width="56" height="56">
       <div>
-        <span class="inline-flex items-center gap-2 text-sm text-muted">
-          <span class="h-2 w-2 rounded-full bg-emerald-500"></span>
-          Disponible para trabajar · Open to work
-        </span>
-        <h1 class="mt-5 text-4xl font-semibold leading-[1.1] tracking-tight sm:text-5xl">
-          Construyo productos web completos, del backend al mostrador.
-        </h1>
-        <p class="mt-6 max-w-xl text-lg leading-relaxed text-muted">
-          Soy Facundo, desarrollador Full Stack con <span class="text-ink">Java, Spring Boot y Angular</span>. Diseñé, construí y mantengo
-          <a href="#chirolas" class="text-ink underline decoration-faint underline-offset-4 hover:decoration-ink">Chirolas</a>,
-          un sistema de punto de venta en producción para kioscos y minimarkets.
-        </p>
-        <div class="mt-8 flex flex-wrap gap-3">
-          <a href="#chirolas" class="btn-primary">Ver caso Chirolas <i class="fa-solid fa-arrow-down text-xs"></i></a>
-          <a href="#contacto" class="btn-ghost">Hablemos</a>
-        </div>
-        <dl class="mt-10 grid max-w-lg grid-cols-3 gap-4 border-t border-line pt-6 text-sm">
-          <div><dt class="text-faint">Producto</dt><dd class="mt-1 font-medium">Chirolas en producción</dd></div>
-          <div><dt class="text-faint">Formación</dt><dd class="mt-1 font-medium">TUP · UTN FRC</dd></div>
-          <div><dt class="text-faint">Idiomas</dt><dd class="mt-1 font-medium">Inglés avanzado</dd></div>
-        </dl>
+        <h1 class="text-lg font-medium">Facundo Guzmán</h1>
+        <p class="text-sm text-muted">Desarrollador Full Stack · Córdoba, Argentina</p>
       </div>
-      <div class="relative mx-auto w-full max-w-[240px] sm:max-w-xs lg:max-w-[300px]">
-        <img src="/src/assets/fotoperfil.jpeg" alt="Facundo Guzmán" class="aspect-[4/5] w-full rounded-xl border border-line object-cover" width="972" height="1296">
-      </div>
+    </div>
+    <p class="mt-8 max-w-2xl text-3xl font-medium leading-tight tracking-tight sm:text-4xl">
+      Desarrollo aplicaciones web con Java, Spring Boot y Angular.
+    </p>
+    <p class="mt-4 max-w-2xl text-lg text-muted">
+      Creador de <a href="#chirolas" class="text-ink underline underline-offset-4">Chirolas</a>, un punto de venta en producción para kioscos y minimarkets.
+    </p>
+    <div class="mt-8 flex flex-wrap gap-3">
+      <a href="#contacto" class="btn-primary">Contactame</a>
+      <a href="https://www.linkedin.com/in/facundo-guzman-b81a612a0" target="_blank" rel="noopener" class="btn-ghost">LinkedIn</a>
     </div>
   </section>
 
-  <!-- Chirolas case study -->
-  <section id="chirolas" class="border-t border-line py-20 sm:py-28">
-    <div class="container-page">
-      <div class="reveal flex flex-wrap items-end justify-between gap-6">
-        <div class="max-w-2xl">
-          <p class="eyebrow">Proyecto destacado · En producción</p>
-          <h2 class="section-title">Chirolas App: punto de venta para kioscos y minimarkets</h2>
-          <p class="mt-4 text-lg text-muted">Un producto SaaS que diseñé y desarrollé de punta a punta: backend, frontend, cobros, infraestructura y la landing comercial.</p>
-        </div>
-        <div class="flex flex-wrap gap-3">
-          <a href="https://www.chirolaspv.com.ar/" target="_blank" rel="noopener" class="btn-primary">Visitar sitio <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i></a>
-          <a href="https://www.instagram.com/chirolaspv" target="_blank" rel="noopener" class="btn-ghost"><i class="fab fa-instagram"></i> Instagram</a>
+  <!-- Proyectos -->
+  <section id="proyectos" class="border-t border-line py-16">
+    <h2 class="section-label">Proyectos</h2>
+
+    <article id="chirolas" class="mt-8 grid gap-8 lg:grid-cols-[1.2fr_1fr] lg:items-center">
+      <img src="/src/assets/chirolas/pos-real-use.webp" alt="Chirolas funcionando en un mostrador" class="w-full rounded-lg border border-line" width="1024" height="503" loading="lazy">
+      <div>
+        <p class="text-sm text-muted">Proyecto propio · En producción</p>
+        <h3 class="mt-1 text-2xl font-medium">Chirolas App</h3>
+        <p class="mt-3 text-muted">Sistema de punto de venta SaaS para kioscos y minimarkets.</p>
+        <ul class="mt-4 space-y-1.5 text-sm text-muted">
+          <li>— Cobros con QR y Point de Mercado Pago</li>
+          <li>— Caja, stock y estadísticas de ventas</li>
+          <li>— Multi-local, roles y suscripciones</li>
+          <li>— Funciona offline como PWA</li>
+        </ul>
+        <p class="mt-4 text-sm text-faint">Angular · Spring Boot · PostgreSQL · Mercado Pago</p>
+        <div class="mt-5 flex gap-5 text-sm">
+          <a href="https://www.chirolaspv.com.ar/" target="_blank" rel="noopener" class="link">Ver sitio ↗</a>
+          <a href="https://www.instagram.com/chirolaspv" target="_blank" rel="noopener" class="link">Instagram ↗</a>
         </div>
       </div>
+    </article>
 
-      <figure class="reveal mt-10 overflow-hidden rounded-2xl border border-line">
-        <img src="/src/assets/chirolas/pos-real-use.webp" alt="Chirolas funcionando en el mostrador de un comercio" class="w-full object-cover" width="1024" height="503" loading="lazy">
-      </figure>
-
-      <div class="reveal mt-10 grid gap-6 md:grid-cols-3">
-        <div class="card p-6">
-          <p class="text-sm font-medium text-ink">El problema</p>
-          <p class="mt-3 leading-relaxed text-muted">Los kioscos y minimarkets suelen vender con cuaderno o con sistemas caros y complejos. Pierden control de caja, de stock y no saben qué productos les dejan plata.</p>
-        </div>
-        <div class="card p-6">
-          <p class="text-sm font-medium text-ink">La solución</p>
-          <p class="mt-3 leading-relaxed text-muted">Un POS rápido para el mostrador, con cobro por QR y Point de Mercado Pago, apertura y cierre de caja con arqueo, control de stock, historial y estadísticas de ventas.</p>
-        </div>
-        <div class="card p-6">
-          <p class="text-sm font-medium text-ink">El modelo</p>
-          <p class="mt-3 leading-relaxed text-muted">SaaS por suscripción con planes pagos, multi-local y multi-usuario con roles, y una landing propia para captar comercios.</p>
-        </div>
-      </div>
-
-      <div class="reveal mt-6 grid gap-6 lg:grid-cols-[1.1fr_1fr]">
-        <div class="card p-6 sm:p-8">
-          <p class="text-sm font-medium text-ink">Decisiones técnicas</p>
-          <ul class="mt-5 list-disc space-y-3 pl-5 text-muted marker:text-faint">
-            <li><span class="text-ink">Multi-tenant seguro:</span> Spring Security + JWT con aislamiento de datos por comercio, cubierto con tests.</li>
-            <li><span class="text-ink">Cobros integrados:</span> QR y Point de Mercado Pago con webhooks, y suscripciones recurrentes.</li>
-            <li><span class="text-ink">Tiempo real:</span> Server-Sent Events para reflejar pagos y ventas al instante en el mostrador.</li>
-            <li><span class="text-ink">Funciona offline:</span> PWA con service worker para seguir vendiendo aunque se corte internet.</li>
-            <li><span class="text-ink">Datos confiables:</span> PostgreSQL en Supabase con migraciones versionadas (Flyway) y backups automáticos con GitHub Actions.</li>
-            <li><span class="text-ink">Rendimiento y protección:</span> caché con Caffeine y rate limiting con Bucket4j.</li>
-          </ul>
-        </div>
-        <div class="grid grid-cols-2 gap-4">
-          <img src="/src/assets/chirolas/feat-venta.webp" alt="Pantalla de venta de Chirolas" class="col-span-2 w-full rounded-xl border border-line bg-white object-cover" loading="lazy">
-          <img src="/src/assets/chirolas/feat-estadisticas.webp" alt="Panel de estadísticas de Chirolas" class="h-full w-full rounded-xl border border-line bg-white object-cover object-left-top" loading="lazy">
-          <img src="/src/assets/chirolas/pos-caja.webp" alt="Cierre de caja con arqueo en Chirolas" class="h-full w-full rounded-xl border border-line bg-white object-cover object-top" loading="lazy">
-        </div>
-      </div>
-
-      <div class="reveal mt-8 flex flex-wrap gap-2">
-        <span class="chip">Angular 22</span>
-        <span class="chip">Spring Boot 3</span>
-        <span class="chip">Java 17</span>
-        <span class="chip">PostgreSQL</span>
-        <span class="chip">Tailwind</span>
-        <span class="chip">Mercado Pago</span>
-        <span class="chip">Render</span>
-        <span class="chip">Supabase</span>
-        <span class="chip">Vercel</span>
-      </div>
+    <div class="mt-14 grid gap-8 sm:grid-cols-2">
+      <article>
+        <img src="/src/assets/hospital-turn-manager.jpg" alt="Hospital Turn Manager" class="aspect-[16/9] w-full rounded-lg border border-line object-cover" loading="lazy">
+        <h3 class="mt-4 font-medium">Hospital Turn Manager</h3>
+        <p class="mt-1 text-sm text-muted">Gestor de turnos médicos con API REST y JWT.</p>
+        <p class="mt-2 text-sm text-faint">Spring Boot · PostgreSQL · Angular</p>
+        <a href="https://github.com/FacuGuz/hospital-turn-manager" target="_blank" rel="noopener" class="link mt-3 inline-block text-sm">Código ↗</a>
+      </article>
+      <article>
+        <img src="/src/assets/proyectoflowdeck.png" alt="FlowDeck" class="aspect-[16/9] w-full rounded-lg border border-line object-cover" loading="lazy">
+        <h3 class="mt-4 font-medium">FlowDeck</h3>
+        <p class="mt-1 text-sm text-muted">Tablero Kanban colaborativo para equipos.</p>
+        <p class="mt-2 text-sm text-faint">Spring Boot · Angular · REST API</p>
+        <a href="https://github.com/FacuGuz/FlowDeck-" target="_blank" rel="noopener" class="link mt-3 inline-block text-sm">Código ↗</a>
+      </article>
     </div>
-  </section>
 
-  <!-- Other projects -->
-  <section id="proyectos" class="py-20 sm:py-28">
-    <div class="container-page">
-      <div class="reveal max-w-2xl">
-        <p class="eyebrow">Otros proyectos</p>
-        <h2 class="section-title">Proyectos full stack</h2>
-      </div>
-      <div class="mt-10 grid gap-6 md:grid-cols-2">
-        <article class="reveal card group overflow-hidden">
-          <a href="https://github.com/FacuGuz/hospital-turn-manager" target="_blank" rel="noopener" class="block aspect-[16/9] overflow-hidden border-b border-line">
-            <img src="/src/assets/hospital-turn-manager.jpg" alt="Hospital Turn Manager" class="h-full w-full object-cover" loading="lazy">
-          </a>
-          <div class="p-6">
-            <h3 class="text-xl font-semibold">Hospital Turn Manager</h3>
-            <p class="mt-2 text-muted">Gestor de turnos médicos con API REST, autenticación JWT y flujos administrativos.</p>
-            <p class="mt-4 font-mono text-xs text-faint">Spring Boot · JWT · PostgreSQL · Angular</p>
-            <div class="mt-5 flex gap-5">
-              <a href="https://github.com/FacuGuz/hospital-turn-manager" target="_blank" rel="noopener" class="link-arrow"><i class="fab fa-github"></i> Código</a>
-              <a href="https://www.linkedin.com/posts/facundo-guzman-b81a612a0_restapi-angular-typescript-activity-7406739894481420289-RuZ_" target="_blank" rel="noopener" class="link-arrow"><i class="fab fa-linkedin"></i> Demo en LinkedIn</a>
-            </div>
-          </div>
-        </article>
-        <article class="reveal card group overflow-hidden">
-          <a href="https://github.com/FacuGuz/FlowDeck-" target="_blank" rel="noopener" class="block aspect-[16/9] overflow-hidden border-b border-line">
-            <img src="/src/assets/proyectoflowdeck.png" alt="FlowDeck" class="h-full w-full object-cover" loading="lazy">
-          </a>
-          <div class="p-6">
-            <h3 class="text-xl font-semibold">FlowDeck</h3>
-            <p class="mt-2 text-muted">Tablero colaborativo estilo Kanban para que los equipos distribuyan tareas y sigan su estado.</p>
-            <p class="mt-4 font-mono text-xs text-faint">Spring Boot · Angular · REST API</p>
-            <div class="mt-5 flex gap-5">
-              <a href="https://github.com/FacuGuz/FlowDeck-" target="_blank" rel="noopener" class="link-arrow"><i class="fab fa-github"></i> Código</a>
-              <a href="https://www.linkedin.com/posts/facundo-guzman-b81a612a0_springboot-angular-restapi-activity-7386081090605821952-0FQU" target="_blank" rel="noopener" class="link-arrow"><i class="fab fa-linkedin"></i> Demo en LinkedIn</a>
-            </div>
-          </div>
-        </article>
-      </div>
-
-      <div class="reveal mt-16">
-        <p class="eyebrow">Freelance</p>
-        <h3 class="mt-2 text-2xl font-semibold tracking-tight">Sitios para clientes</h3>
-        <div class="mt-6 grid gap-4 sm:grid-cols-3">
-          <a href="https://seiba-restobar.vercel.app" target="_blank" rel="noopener" class="card group p-5 transition hover:border-faint">
-            <div class="flex items-center justify-between"><span class="font-medium">SEIBA Restobar</span><i class="fa-solid fa-arrow-up-right text-sm text-faint group-hover:text-ink"></i></div>
-            <p class="mt-2 text-sm text-muted">Sitio para un restobar: carta, ambiente y reservas.</p>
-          </a>
-          <a href="https://adal-seguridad.vercel.app" target="_blank" rel="noopener" class="card group p-5 transition hover:border-faint">
-            <div class="flex items-center justify-between"><span class="font-medium">Adal Seguridad</span><i class="fa-solid fa-arrow-up-right text-sm text-faint group-hover:text-ink"></i></div>
-            <p class="mt-2 text-sm text-muted">Sitio institucional para una empresa de seguridad.</p>
-          </a>
-          <a href="https://campestre-polleria.vercel.app" target="_blank" rel="noopener" class="card group p-5 transition hover:border-faint">
-            <div class="flex items-center justify-between"><span class="font-medium">Campestre Pollería</span><i class="fa-solid fa-arrow-up-right text-sm text-faint group-hover:text-ink"></i></div>
-            <p class="mt-2 text-sm text-muted">Sitio para una pollería, con productos y contacto.</p>
-          </a>
-        </div>
-      </div>
+    <div class="mt-14">
+      <h3 class="text-sm text-muted">Sitios para clientes</h3>
+      <ul class="mt-3 divide-y divide-line border-y border-line text-sm">
+        <li><a href="https://seiba-restobar.vercel.app" target="_blank" rel="noopener" class="flex justify-between py-3 hover:text-muted"><span>SEIBA Restobar</span><span class="text-faint">Restobar ↗</span></a></li>
+        <li><a href="https://adal-seguridad.vercel.app" target="_blank" rel="noopener" class="flex justify-between py-3 hover:text-muted"><span>Adal Seguridad</span><span class="text-faint">Empresa de seguridad ↗</span></a></li>
+        <li><a href="https://campestre-polleria.vercel.app" target="_blank" rel="noopener" class="flex justify-between py-3 hover:text-muted"><span>Campestre Pollería</span><span class="text-faint">Pollería ↗</span></a></li>
+      </ul>
     </div>
   </section>
 
   <!-- Stack -->
-  <section id="stack" class="border-t border-line py-20 sm:py-28">
-    <div class="container-page">
-      <div class="reveal max-w-2xl">
-        <p class="eyebrow">Stack</p>
-        <h2 class="section-title">Con qué trabajo</h2>
-      </div>
-      <div class="reveal mt-10 grid gap-x-10 gap-y-8 md:grid-cols-2">
-        <div>
-          <h3 class="text-sm font-medium text-muted">Backend</h3>
-          <div class="mt-3 flex flex-wrap gap-2">
-            <span class="chip">Java</span>
-            <span class="chip">Spring Boot</span>
-            <span class="chip">Spring Security · JWT</span>
-            <span class="chip">PostgreSQL / SQL</span>
-            <span class="chip">Flyway</span>
-            <span class="chip">Mercado Pago API</span>
-          </div>
-        </div>
-        <div>
-          <h3 class="text-sm font-medium text-muted">Frontend</h3>
-          <div class="mt-3 flex flex-wrap gap-2">
-            <span class="chip">Angular</span>
-            <span class="chip">TypeScript</span>
-            <span class="chip">Tailwind CSS</span>
-            <span class="chip">RxJS</span>
-            <span class="chip">Vitest</span>
-          </div>
-        </div>
-        <div>
-          <h3 class="text-sm font-medium text-muted">Deploy e infraestructura</h3>
-          <div class="mt-3 flex flex-wrap gap-2">
-            <span class="chip">Render</span>
-            <span class="chip">Supabase</span>
-            <span class="chip">Vercel</span>
-            <span class="chip">Netlify</span>
-            <span class="chip">GitHub Actions</span>
-            <span class="chip">Docker</span>
-            <span class="chip">Resend</span>
-          </div>
-        </div>
-        <div>
-          <h3 class="text-sm font-medium text-muted">Herramientas</h3>
-          <div class="mt-3 flex flex-wrap gap-2">
-            <span class="chip">Git · GitHub</span>
-            <span class="chip">Postman</span>
-            <span class="chip">Taiga · Scrum</span>
-          </div>
-        </div>
-      </div>
-    </div>
+  <section id="stack" class="border-t border-line py-16">
+    <h2 class="section-label">Stack</h2>
+    <dl class="mt-8 grid gap-6 text-sm sm:grid-cols-2">
+      <div><dt class="text-muted">Backend</dt><dd class="mt-1">Java, Spring Boot, Spring Security, JWT, PostgreSQL, Flyway</dd></div>
+      <div><dt class="text-muted">Frontend</dt><dd class="mt-1">Angular, TypeScript, Tailwind CSS, RxJS, Vitest</dd></div>
+      <div><dt class="text-muted">Infraestructura</dt><dd class="mt-1">Render, Supabase, Vercel, Netlify, Docker, GitHub Actions</dd></div>
+      <div><dt class="text-muted">Herramientas</dt><dd class="mt-1">Git, Postman, Taiga, Mercado Pago API, Resend</dd></div>
+    </dl>
   </section>
 
-  <!-- Trayectoria -->
-  <section id="trayectoria" class="py-20 sm:py-28">
-    <div class="container-page grid gap-12 lg:grid-cols-[1fr_1.3fr]">
-      <div class="reveal">
-        <p class="eyebrow">Trayectoria</p>
-        <h2 class="section-title">Sobre mí</h2>
-        <p class="mt-5 leading-relaxed text-muted">Estudio la Tecnicatura Universitaria en Programación en la UTN FRC y combino la formación con proyectos reales: un producto propio en producción y sitios para clientes.</p>
-        <p class="mt-4 leading-relaxed text-muted">Me gusta entender el negocio detrás del código, tomar decisiones de arquitectura con criterio y llevar las cosas hasta que funcionan en manos del usuario. Trabajo bien en equipo, tengo inglés avanzado y sigo aprendiendo todo el tiempo.</p>
-      </div>
-      <ol class="reveal relative space-y-8 border-l border-line pl-8">
-        <li class="relative">
-          <span class="absolute -left-[37px] top-1.5 h-2.5 w-2.5 rounded-full bg-ink ring-4 ring-bg"></span>
-          <p class="font-mono text-xs text-faint">Actualidad</p>
-          <h3 class="mt-1 text-lg font-semibold">Fundador y desarrollador · Chirolas App</h3>
-          <p class="mt-2 text-muted">Diseño, desarrollo y opero un POS SaaS para comercios: producto, backend, frontend, cobros, infraestructura y soporte.</p>
-        </li>
-        <li class="relative">
-          <span class="absolute -left-[37px] top-1.5 h-2.5 w-2.5 rounded-full bg-faint ring-4 ring-bg"></span>
-          <p class="font-mono text-xs text-faint">Freelance</p>
-          <h3 class="mt-1 text-lg font-semibold">Desarrollador web</h3>
-          <p class="mt-2 text-muted">Sitios a medida para comercios y empresas locales, desde el diseño hasta el deploy.</p>
-        </li>
-        <li class="relative">
-          <span class="absolute -left-[37px] top-1.5 h-2.5 w-2.5 rounded-full bg-faint ring-4 ring-bg"></span>
-          <p class="font-mono text-xs text-faint">En curso</p>
-          <h3 class="mt-1 text-lg font-semibold">Tecnicatura Universitaria en Programación · UTN FRC</h3>
-          <p class="mt-2 text-muted">Desarrollo de software, bases de datos, metodologías ágiles y arquitectura de aplicaciones.</p>
-        </li>
-      </ol>
+  <!-- Formación -->
+  <section class="border-t border-line py-16">
+    <h2 class="section-label">Formación</h2>
+    <div class="mt-8 flex flex-wrap justify-between gap-2 text-sm">
+      <p>Tecnicatura Universitaria en Programación · UTN FRC</p>
+      <p class="text-muted">En curso · Inglés avanzado</p>
     </div>
   </section>
 
   <!-- Contacto -->
-  <section id="contacto" class="border-t border-line py-20 sm:py-28">
-    <div class="container-page grid gap-12 lg:grid-cols-[1fr_1.3fr]">
-      <div class="reveal">
-        <p class="eyebrow">Contacto</p>
-        <h2 class="section-title">¿Trabajamos juntos?</h2>
-        <p class="mt-5 leading-relaxed text-muted">Estoy buscando oportunidades como desarrollador y también tomo proyectos freelance. Escribime y te respondo a la brevedad.</p>
-        <ul class="mt-8 space-y-3 text-sm">
-          <li><a href="mailto:guzmanfacu02@hotmail.com" class="inline-flex items-center gap-3 text-muted hover:text-ink"><i class="fa-solid fa-envelope w-4"></i>guzmanfacu02@hotmail.com</a></li>
-          <li><a href="https://www.linkedin.com/in/facundo-guzman-b81a612a0" target="_blank" rel="noopener" class="inline-flex items-center gap-3 text-muted hover:text-ink"><i class="fab fa-linkedin w-4"></i>LinkedIn</a></li>
-          <li><a href="https://github.com/FacuGuz" target="_blank" rel="noopener" class="inline-flex items-center gap-3 text-muted hover:text-ink"><i class="fab fa-github w-4"></i>github.com/FacuGuz</a></li>
-        </ul>
+  <section id="contacto" class="border-t border-line py-16">
+    <h2 class="section-label">Contacto</h2>
+    <div class="mt-8 grid gap-10 lg:grid-cols-[1fr_1.4fr]">
+      <div class="space-y-2 text-sm">
+        <p class="text-muted">Disponible para trabajo y proyectos freelance.</p>
+        <p><a href="mailto:guzmanfacu02@hotmail.com" class="link">guzmanfacu02@hotmail.com</a></p>
       </div>
-      <form id="form" class="reveal card grid gap-4 p-6 sm:grid-cols-2 sm:p-8">
+      <form id="form" class="grid gap-4 sm:grid-cols-2">
         <input type="hidden" name="access_key" value="aba29d6c-2600-42f3-a629-c1b961c72df5">
         <input type="checkbox" name="botcheck" class="hidden" tabindex="-1" autocomplete="off">
-        <label class="block space-y-1.5 text-sm">
-          <span class="text-muted">Nombre</span>
-          <input type="text" name="name" required autocomplete="name" class="field">
-        </label>
-        <label class="block space-y-1.5 text-sm">
-          <span class="text-muted">Email</span>
-          <input type="email" name="email" required autocomplete="email" class="field">
-        </label>
-        <label class="block space-y-1.5 text-sm sm:col-span-2">
-          <span class="text-muted">Mensaje</span>
-          <textarea name="message" rows="5" required class="field resize-y"></textarea>
-        </label>
+        <input type="text" name="name" required autocomplete="name" placeholder="Nombre" aria-label="Nombre" class="field">
+        <input type="email" name="email" required autocomplete="email" placeholder="Email" aria-label="Email" class="field">
+        <textarea name="message" rows="4" required placeholder="Mensaje" aria-label="Mensaje" class="field resize-y sm:col-span-2"></textarea>
         <div class="flex flex-wrap items-center gap-4 sm:col-span-2">
-          <button type="submit" class="btn-primary">Enviar mensaje <i class="fa-solid fa-paper-plane text-xs"></i></button>
+          <button type="submit" class="btn-primary">Enviar</button>
           <p id="result" class="text-sm" role="status" aria-live="polite"></p>
         </div>
       </form>
@@ -339,10 +154,7 @@
 </main>
 
 <footer class="border-t border-line py-8">
-  <div class="container-page flex flex-wrap items-center justify-between gap-4 text-sm text-faint">
-    <p>© <span id="year">2026</span> Facundo Guzmán</p>
-    <p>Hecho con Vite y Tailwind CSS</p>
-  </div>
+  <div class="container-page text-sm text-faint">© <span id="year">2026</span> Facundo Guzmán</div>
 </footer>
 
 <script type="module" src="/src/scripts/app.js"></script>

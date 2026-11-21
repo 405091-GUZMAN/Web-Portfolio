@@ -2,89 +2,41 @@
 
 @theme {
   --font-sans: "Geist", ui-sans-serif, system-ui, sans-serif;
-  --font-mono: "Geist Mono", ui-monospace, SFMono-Regular, monospace;
 
-  --color-bg: #0a0c0f;
-  --color-surface: #11151b;
-  --color-surface-2: #161b23;
-  --color-line: #222a35;
-  --color-ink: #e8edf3;
-  --color-muted: #94a0b0;
-  --color-faint: #64707f;
-  --color-accent: #e8edf3;
-  --color-accent-strong: #ffffff;
-  --color-accent-ink: #0a0c0f;
+  --color-bg: #fafaf9;
+  --color-line: #e7e5e4;
+  --color-ink: #1c1917;
+  --color-muted: #57534e;
+  --color-faint: #a8a29e;
 }
 
 @layer base {
   html {
     scroll-behavior: smooth;
-    scroll-padding-top: 5rem;
+    scroll-padding-top: 4rem;
   }
   body {
     @apply bg-bg text-ink font-sans antialiased;
-  }
-  ::selection {
-    background: color-mix(in oklab, var(--color-accent) 35%, transparent);
   }
 }
 
 @layer components {
   .container-page {
-    @apply mx-auto w-full max-w-6xl px-4 sm:px-6;
+    @apply mx-auto w-full max-w-4xl px-4 sm:px-6;
   }
-  .eyebrow {
+  .section-label {
     @apply text-sm font-medium text-muted;
   }
-  .section-title {
-    @apply mt-2 text-3xl font-semibold tracking-tight sm:text-4xl;
-  }
-  .card {
-    @apply rounded-xl border border-line bg-surface;
-  }
-  .chip {
-    @apply inline-flex items-center rounded-md border border-line px-2.5 py-1 text-sm text-muted;
-  }
-  .chip i {
-    @apply text-base;
-  }
-  .btn {
-    @apply inline-flex items-center gap-2 rounded-lg px-4 py-2.5 text-sm font-medium transition;
-  }
   .btn-primary {
-    @apply inline-flex items-center gap-2 rounded-lg px-4 py-2.5 text-sm font-medium transition bg-accent text-accent-ink hover:bg-accent-strong;
+    @apply inline-flex items-center rounded-md bg-ink px-4 py-2 text-sm font-medium text-bg transition hover:bg-muted;
   }
   .btn-ghost {
-    @apply inline-flex items-center gap-2 rounded-lg px-4 py-2.5 text-sm font-medium transition border border-line text-ink hover:border-faint;
+    @apply inline-flex items-center rounded-md border border-line px-4 py-2 text-sm font-medium text-ink transition hover:border-faint;
   }
-  .link-arrow {
-    @apply inline-flex items-center gap-1.5 text-sm font-medium text-ink hover:underline underline-offset-4;
+  .link {
+    @apply text-ink underline decoration-line underline-offset-4 transition hover:decoration-ink;
   }
   .field {
-    @apply w-full rounded-lg border border-line bg-surface-2 px-3.5 py-2.5 text-ink placeholder:text-faint outline-none transition focus:border-accent;
+    @apply w-full rounded-md border border-line bg-white px-3 py-2 text-sm text-ink placeholder:text-faint outline-none transition focus:border-ink;
   }
-}
-
-.reveal {
-  opacity: 0;
-  transform: translateY(16px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-.reveal.visible {
-  opacity: 1;
-  transform: none;
-}
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  .reveal { opacity: 1; transform: none; transition: none; }
-}
-
-#mobile-menu {
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.2s ease;
-}
-#mobile-menu.open {
-  opacity: 1;
-  pointer-events: auto;
 }
