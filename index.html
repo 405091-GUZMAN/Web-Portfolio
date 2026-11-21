@@ -89,6 +89,7 @@
     <a href="#sobre-mi" class="text-gray-200 hover:text-emerald-200 transition-colors">Sobre mi</a>
     <a href="#habilidades" class="text-gray-200 hover:text-emerald-200 transition-colors">Habilidades</a>
     <a href="#proyectos" class="text-gray-200 hover:text-emerald-200 transition-colors">Proyectos</a>
+    <a href="#clientes" class="text-gray-200 hover:text-emerald-200 transition-colors">Clientes</a>
     <a href="#contacto" class="text-gray-200 hover:text-emerald-200 transition-colors">Contacto</a>
   </nav>
 
@@ -114,6 +115,7 @@
   <a href="#sobre-mi" class="text-3xl text-gray-200 px-4 py-4 hover:text-white transition duration-300">Sobre mi</a>
   <a href="#habilidades" class="text-3xl text-gray-200 px-4 py-4 hover:text-white transition duration-300">Habilidades</a>
   <a href="#proyectos" class="text-3xl text-gray-200 px-4 py-4 hover:text-white transition duration-300">Proyectos</a>
+    <a href="#clientes" class="text-3xl text-gray-200 px-4 py-4 hover:text-white transition duration-300">Clientes</a>
   <a href="#contacto" class="text-3xl text-gray-200 px-4 py-4 hover:text-white transition duration-300">Contacto</a>
 
   <button id="close-menu" class="absolute top-6 right-6 text-white">
@@ -127,7 +129,7 @@
   <section id="sobre-mi" data-component="about-hero" class="component-shell max-w-6xl mx-auto p-6 sm:p-10 space-y-6 fade-up scroll-mt-28">
     <div class="space-y-5 text-center">
       <h2 class="text-4xl sm:text-5xl font-bold leading-tight text-emerald-100">Sobre mi</h2>
-      <p class="text-lg text-gray-200 leading-relaxed">Soy estudiante de la Tecnicatura Universitaria en Programacion en la UTN FRC, con una solida base en desarrollo de software y un enfoque practico en la resolucion de problemas, tambien contando con un nivel avanzado de ingles. A lo largo de mi formacion academica he adquirido experiencia trabajando con diversos lenguajes y tecnologas, tanto del lado del frontend como del backend.</p>
+      <p class="text-lg text-gray-200 leading-relaxed">Soy estudiante de la Tecnicatura Universitaria en Programacion en la UTN FRC, con una solida base en desarrollo de software y un enfoque practico en la resolucion de problemas, tambien contando con un nivel avanzado de ingles. A lo largo de mi formacion academica he adquirido experiencia trabajando con diversos lenguajes y tecnologias, tanto del lado del frontend como del backend.</p>
       <p class="text-lg text-gray-200 leading-relaxed">Me considero una persona proactiva, con ganas de seguir aprendiendo y aplicando buenas practicas de programacion en proyectos reales. Estoy en busqueda de oportunidades que me permitan seguir creciendo profesionalmente y aportar valor desde mis habilidades tecnicas y mi compromiso con el aprendizaje constante. Experiencia en REST APIs, microservicios, seguridad con JWT y Spring Security, integraciones con Google OAuth y MercadoPago, y diseño de esquemas relacionales.</p>
       <div class="flex flex-wrap gap-3 justify-center">
         <span class="px-3 py-1 bg-slate-800 text-slate-200 text-sm">Ingles avanzado</span>
@@ -155,54 +157,117 @@
       </div>
       <div class="accent-bar"></div>
     </div>
+    <p class="text-slate-400 uppercase tracking-[0.2em] text-xs mt-8 mb-3">Backend</p>
     <div class="grid gap-4 sm:gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
       <div class="skill-card p-4 sm:p-5 flex items-start gap-4 hover:-translate-y-1 transition-transform duration-300">
         <i class="devicon-java-plain colored text-5xl"></i>
         <div>
           <p class="text-xl font-semibold">Java</p>
-            <p class="text-sm text-gray-300">Servicios backend, APIs REST y pruebas automatizadas.</p>
+          <p class="text-sm text-gray-300">Servicios backend, APIs REST y pruebas automatizadas.</p>
         </div>
       </div>
       <div class="skill-card p-4 sm:p-5 flex items-start gap-4 hover:-translate-y-1 transition-transform duration-300">
         <i class="devicon-spring-plain colored text-5xl"></i>
         <div>
           <p class="text-xl font-semibold">Spring Boot</p>
-            <p class="text-sm text-gray-300">Microservicios seguros, JPA y documentacio;n con Swagger.</p>
+          <p class="text-sm text-gray-300">APIs REST, JPA, validaciones y arquitectura en capas.</p>
         </div>
       </div>
       <div class="skill-card p-4 sm:p-5 flex items-start gap-4 hover:-translate-y-1 transition-transform duration-300">
-        <i class="devicon-angularjs-plain colored text-5xl"></i>
+        <i class="fa-solid fa-shield-halved text-5xl text-emerald-200"></i>
+        <div>
+          <p class="text-xl font-semibold">Spring Security + JWT</p>
+          <p class="text-sm text-gray-300">Autenticacion, roles y aislamiento de datos por cliente.</p>
+        </div>
+      </div>
+      <div class="skill-card p-4 sm:p-5 flex items-start gap-4 hover:-translate-y-1 transition-transform duration-300">
+        <i class="devicon-postgresql-plain colored text-5xl"></i>
+        <div>
+          <p class="text-xl font-semibold">PostgreSQL / SQL</p>
+          <p class="text-sm text-gray-300">Modelado relacional, consultas e indices.</p>
+        </div>
+      </div>
+      <div class="skill-card p-4 sm:p-5 flex items-start gap-4 hover:-translate-y-1 transition-transform duration-300">
+        <i class="fa-solid fa-layer-group text-5xl text-emerald-200"></i>
+        <div>
+          <p class="text-xl font-semibold">Flyway</p>
+          <p class="text-sm text-gray-300">Migraciones de base de datos versionadas.</p>
+        </div>
+      </div>
+      <div class="skill-card p-4 sm:p-5 flex items-start gap-4 hover:-translate-y-1 transition-transform duration-300">
+        <i class="fa-solid fa-credit-card text-5xl text-emerald-200"></i>
+        <div>
+          <p class="text-xl font-semibold">Mercado Pago API</p>
+          <p class="text-sm text-gray-300">Cobros con QR y Point, webhooks y suscripciones.</p>
+        </div>
+      </div>
+    </div>
+    <p class="text-slate-400 uppercase tracking-[0.2em] text-xs mt-8 mb-3">Frontend</p>
+    <div class="grid gap-4 sm:gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+      <div class="skill-card p-4 sm:p-5 flex items-start gap-4 hover:-translate-y-1 transition-transform duration-300">
+        <i class="devicon-angular-plain colored text-5xl"></i>
         <div>
           <p class="text-xl font-semibold">Angular</p>
-            <p class="text-sm text-gray-300">SPA modulares, routing y RxJS para datos en vivo.</p>
+          <p class="text-sm text-gray-300">SPA modulares, signals, routing, RxJS y PWA.</p>
         </div>
       </div>
       <div class="skill-card p-4 sm:p-5 flex items-start gap-4 hover:-translate-y-1 transition-transform duration-300">
         <i class="devicon-typescript-plain colored text-5xl"></i>
         <div>
           <p class="text-xl font-semibold">TypeScript</p>
-            <p class="text-sm text-gray-300">Lo;gica de frontend tipada y mantenible.</p>
+          <p class="text-sm text-gray-300">Logica de frontend tipada y mantenible.</p>
         </div>
       </div>
       <div class="skill-card p-4 sm:p-5 flex items-start gap-4 hover:-translate-y-1 transition-transform duration-300">
-        <i class="fa-solid fa-database text-5xl text-emerald-200"></i>
+        <i class="devicon-tailwindcss-original colored text-5xl"></i>
         <div>
-          <p class="text-xl font-semibold">SQL</p>
-            <p class="text-sm text-gray-300">Consultas, modelos relacionales e indices.</p>
+          <p class="text-xl font-semibold">Tailwind CSS</p>
+          <p class="text-sm text-gray-300">Interfaces responsive y sistemas de diseño consistentes.</p>
         </div>
       </div>
       <div class="skill-card p-4 sm:p-5 flex items-start gap-4 hover:-translate-y-1 transition-transform duration-300">
-        <i class="devicon-postgresql-plain colored text-5xl"></i>
+        <i class="fa-solid fa-flask-vial text-5xl text-emerald-200"></i>
         <div>
-          <p class="text-xl font-semibold">PostgreSQL</p>
-            <p class="text-sm text-gray-300">Esquemas, vistas y funciones transaccionales.</p>
+          <p class="text-xl font-semibold">Vitest</p>
+          <p class="text-sm text-gray-300">Tests unitarios del frontend.</p>
         </div>
       </div>
+    </div>
+    <p class="text-slate-400 uppercase tracking-[0.2em] text-xs mt-8 mb-3">Herramientas</p>
+    <div class="grid gap-4 sm:gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
       <div class="skill-card p-4 sm:p-5 flex items-start gap-4 hover:-translate-y-1 transition-transform duration-300">
         <i class="devicon-docker-plain colored text-5xl"></i>
         <div>
           <p class="text-xl font-semibold">Docker</p>
-            <p class="text-sm text-gray-300">Contenedores, docker-compose y despliegues rapidos.</p>
+          <p class="text-sm text-gray-300">Contenedores y docker-compose para entornos de desarrollo.</p>
+        </div>
+      </div>
+      <div class="skill-card p-4 sm:p-5 flex items-start gap-4 hover:-translate-y-1 transition-transform duration-300">
+        <i class="devicon-git-plain colored text-5xl"></i>
+        <div>
+          <p class="text-xl font-semibold">Git / GitHub</p>
+          <p class="text-sm text-gray-300">Control de versiones, ramas y pull requests.</p>
+        </div>
+      </div>
+      <div class="skill-card p-4 sm:p-5 flex items-start gap-4 hover:-translate-y-1 transition-transform duration-300">
+        <i class="devicon-postman-plain colored text-5xl"></i>
+        <div>
+          <p class="text-xl font-semibold">Postman</p>
+          <p class="text-sm text-gray-300">Prueba y documentacion de APIs.</p>
+        </div>
+      </div>
+      <div class="skill-card p-4 sm:p-5 flex items-start gap-4 hover:-translate-y-1 transition-transform duration-300">
+        <i class="fa-solid fa-list-check text-5xl text-emerald-200"></i>
+        <div>
+          <p class="text-xl font-semibold">Taiga</p>
+          <p class="text-sm text-gray-300">Gestion agil de proyectos con Scrum.</p>
+        </div>
+      </div>
+      <div class="skill-card p-4 sm:p-5 flex items-start gap-4 hover:-translate-y-1 transition-transform duration-300">
+        <i class="devicon-vercel-original text-5xl text-white"></i>
+        <div>
+          <p class="text-xl font-semibold">Vercel / Netlify</p>
+          <p class="text-sm text-gray-300">Despliegue continuo de frontends.</p>
         </div>
       </div>
     </div>
@@ -217,7 +282,29 @@
       <div class="accent-bar"></div>
     </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="component-shell p-4 sm:p-6 rounded-2xl mb-6 grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
+        <a href="https://www.chirolaspv.com.ar/" target="_blank" rel="noopener" class="overflow-hidden rounded-xl block aspect-[1200/630]">
+          <img src="/src/assets/chirolas.jpg" alt="Chirolas App, punto de venta para kioscos y minimarkets" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+        </a>
+        <div class="flex flex-col gap-3">
+          <span class="hero-badge text-xs px-3 py-1 self-start uppercase tracking-[0.2em]">Proyecto destacado · En produccion</span>
+          <h4 class="text-2xl sm:text-3xl font-semibold">Chirolas App</h4>
+          <p class="text-gray-300 leading-relaxed">Sistema de punto de venta (POS) para kioscos y minimarkets. Venta rapida en mostrador, cobro con QR y Point de Mercado Pago, control de caja, stock e historial, estadisticas, y suscripciones con planes pagos. Multi-local y multi-usuario, con funcionamiento offline como PWA.</p>
+          <span class="text-xs text-slate-300">Angular 22 . Spring Boot 3 . Spring Security + JWT . PostgreSQL . Flyway . Mercado Pago API . Tailwind</span>
+          <div class="flex flex-wrap items-center gap-3 pt-1">
+            <a href="https://www.chirolaspv.com.ar/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-3 py-1.5 text-xs uppercase tracking-[0.2em] bg-emerald-700 text-white hover:-translate-y-0.5 transition">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              Sitio
+            </a>
+            <a href="https://www.instagram.com/chirolaspv" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-3 py-1.5 text-xs uppercase tracking-[0.2em] bg-white/5 border border-white/10 text-white/80 hover:text-white hover:border-emerald-200/60 transition">
+              <i class="fab fa-instagram"></i>
+              Instagram
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
         <div class="component-shell p-4 sm:p-5 rounded-2xl hover:-translate-y-2 transition-transform duration-300 flex flex-col gap-4">
           <a href="https://github.com/FacuGuz/hospital-turn-manager" target="_blank" class="overflow-hidden rounded-xl h-48 block">
@@ -260,60 +347,41 @@
             </a>
           </div>
         </div>
-
-        <div class="component-shell p-4 sm:p-5 rounded-2xl hover:-translate-y-2 transition-transform duration-300 flex flex-col gap-4">
-          <a href="https://github.com/FacuGuz/e-commerce-with-admin-dashboard.git" target="_blank" class="overflow-hidden rounded-xl h-48 block">
-            <img src="/src/assets/proyecto-3.jpeg" alt="E-Commerce" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
-          </a>
-          <div class="flex-1 flex flex-col gap-2">
-            <h4 class="text-xl font-semibold">E-commerce</h4>
-            <p class="text-gray-300 text-sm leading-relaxed flex-1">Carrito, checkout con MercadoPago y panel admin para productos y usuarios.</p>
-            <span class="text-xs text-slate-300">Angular . Spring . PostgreSQL</span>
-          </div>
-          <div class="flex flex-wrap items-center gap-3 pt-1">
-            <a href="https://github.com/FacuGuz/e-commerce-with-admin-dashboard.git" target="_blank" class="inline-flex items-center gap-2 px-3 py-1.5 text-xs uppercase tracking-[0.2em] bg-white/5 border border-white/10 text-white/80 hover:text-white hover:border-emerald-200/60 transition">
-              <i class="fab fa-github"></i>
-              Repo
-            </a>
-          </div>
-        </div>
-
-        <div class="component-shell p-4 sm:p-5 rounded-2xl hover:-translate-y-2 transition-transform duration-300 flex flex-col gap-4">
-          <a href="https://github.com/405091-GUZMAN/Web-Portfolio.git" target="_blank" class="overflow-hidden rounded-xl h-48 block">
-            <img src="/src/assets/proyecto-1.jpeg" alt="Portfolio Web" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
-          </a>
-          <div class="flex-1 flex flex-col gap-2">
-            <h4 class="text-xl font-semibold">Portfolio Web</h4>
-            <p class="text-gray-300 text-sm leading-relaxed flex-1">Sitio personal con Tailwind y JS, optimizado para contar mi historia y stack.</p>
-            <span class="text-xs text-slate-300">HTML . Tailwind . JS</span>
-          </div>
-          <div class="flex flex-wrap items-center gap-3 pt-1">
-            <a href="https://github.com/405091-GUZMAN/Web-Portfolio.git" target="_blank" class="inline-flex items-center gap-2 px-3 py-1.5 text-xs uppercase tracking-[0.2em] bg-white/5 border border-white/10 text-white/80 hover:text-white hover:border-emerald-200/60 transition">
-              <i class="fab fa-github"></i>
-              Repo
-            </a>
-          </div>
-        </div>
-
-        <div class="component-shell p-4 sm:p-5 rounded-2xl hover:-translate-y-2 transition-transform duration-300 flex flex-col gap-4">
-          <a href="https://github.com/405091-GUZMAN/PremierLeague-Manager.git" target="_blank" class="overflow-hidden rounded-xl h-48 block">
-            <img src="/src/assets/proyecto-2.jpeg" alt="Premier League Manager" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
-          </a>
-          <div class="flex-1 flex flex-col gap-2">
-            <h4 class="text-xl font-semibold">Premier League Manager</h4>
-            <p class="text-gray-300 text-sm leading-relaxed flex-1">Login, CRUD en base de datos y ranking en tiempo real para gestionar equipos.</p>
-            <span class="text-xs text-slate-300">Angular . Node . SQL</span>
-          </div>
-          <div class="flex flex-wrap items-center gap-3 pt-1">
-            <a href="https://github.com/405091-GUZMAN/PremierLeague-Manager.git" target="_blank" class="inline-flex items-center gap-2 px-3 py-1.5 text-xs uppercase tracking-[0.2em] bg-white/5 border border-white/10 text-white/80 hover:text-white hover:border-emerald-200/60 transition">
-              <i class="fab fa-github"></i>
-              Repo
-            </a>
-          </div>
-        </div>
-
       </div>
     </section>
+
+  <section id="clientes" data-component="freelance" class="max-w-6xl mx-auto mt-16 fade-up scroll-mt-24">
+    <div class="flex items-center justify-between flex-wrap gap-4 mb-6">
+      <div>
+        <p class="text-emerald-200 uppercase tracking-[0.25em] text-sm">Freelance</p>
+        <h3 class="text-3xl sm:text-4xl font-bold text-emerald-100">Sitios para clientes</h3>
+      </div>
+      <div class="accent-bar"></div>
+    </div>
+    <div class="grid gap-4 sm:gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+      <a href="https://seiba-restobar.vercel.app" target="_blank" rel="noopener" class="skill-card p-5 flex flex-col gap-2 hover:-translate-y-1 hover:border-emerald-200/40 transition">
+        <div class="flex items-center justify-between gap-3">
+          <h4 class="text-lg font-semibold">SEIBA Restobar</h4>
+          <i class="fa-solid fa-arrow-up-right-from-square text-sm text-emerald-200"></i>
+        </div>
+        <p class="text-sm text-gray-300">Sitio web para un restobar: carta, ambiente y reservas.</p>
+      </a>
+      <a href="https://adal-seguridad.vercel.app" target="_blank" rel="noopener" class="skill-card p-5 flex flex-col gap-2 hover:-translate-y-1 hover:border-emerald-200/40 transition">
+        <div class="flex items-center justify-between gap-3">
+          <h4 class="text-lg font-semibold">Adal Seguridad</h4>
+          <i class="fa-solid fa-arrow-up-right-from-square text-sm text-emerald-200"></i>
+        </div>
+        <p class="text-sm text-gray-300">Sitio institucional para una empresa de seguridad.</p>
+      </a>
+      <a href="https://campestre-polleria.vercel.app" target="_blank" rel="noopener" class="skill-card p-5 flex flex-col gap-2 hover:-translate-y-1 hover:border-emerald-200/40 transition">
+        <div class="flex items-center justify-between gap-3">
+          <h4 class="text-lg font-semibold">Campestre Polleria</h4>
+          <i class="fa-solid fa-arrow-up-right-from-square text-sm text-emerald-200"></i>
+        </div>
+        <p class="text-sm text-gray-300">Sitio web para una polleria, con productos y contacto.</p>
+      </a>
+    </div>
+  </section>
 
   <section id="contacto" data-component="contact" class="max-w-6xl mx-auto mt-16 fade-up scroll-mt-24">
     <div class="component-shell p-6 sm:p-8 rounded-2xl">
